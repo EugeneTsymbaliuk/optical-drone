@@ -12,5 +12,5 @@ paths:
     rpiCameraHFlip: true
 #    rpiCameraBitrate: 1500000
 ```
-5. Run ./mediatx
+5. ./mediatx
 6. On VLC type rtsp://192.168.1.187:8554/cam
