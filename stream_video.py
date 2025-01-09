@@ -83,15 +83,30 @@ class StreamingServer(socketserver.ThreadingMixIn, server.HTTPServer):
     allow_reuse_address = True
     daemon_threads = True
 
+def sinfo():
+    global skey
+    f = open('/proc/cpuinfo','r')
+    for l in f:
+        if l.startswith('Serial'):
+            skey = l[-18:].strip()
 
-picam2 = Picamera2()
-picam2.configure(picam2.create_video_configuration(main={"size": (1296, 972)}, transform=Transform(vflip=True, hflip=True,)))
-output = StreamingOutput()
-picam2.start_recording(JpegEncoder(), FileOutput(output))
+def startStream():
+    sskey = '100000001daa5c9b'
+    sinfo()
+    global output
+    if skey == sskey:
+        picam2 = Picamera2()
+        picam2.configure(picam2.create_video_configuration(main={"size": (1296, 972)}, transform=Transform(vflip=True, hflip=True,)))
+        output = StreamingOutput()
+        picam2.start_recording(JpegEncoder(), FileOutput(output))
+    else:
+        print("NO SN!")
+    try:
+        address = ('', 8080)
+        server = StreamingServer(address, StreamingHandler)
+        server.serve_forever()
+    finally:
+        picam2.stop_recording()
 
-try:
-    address = ('', 8080)
-    server = StreamingServer(address, StreamingHandler)
-    server.serve_forever()
-finally:
-    picam2.stop_recording()
+if __name__ == "__main__":
+    startStream()
