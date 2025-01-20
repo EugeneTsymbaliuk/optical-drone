@@ -30,7 +30,7 @@ v4l2-ctl --list-devices
 # Stream udp traffic from Thermal USB Camera
 1. Server Side:
 ```
-ffmpeg -f v4l2 -i /dev/video0 -fflags nobuffer -framerate 25 -f mpegts udp:192.168.1.155:9000
+ffmpeg -f v4l2 -i /dev/video0 -tune zero_latency -framerate 25  -f mpegts -omit_video_pes_length 1 udp:192.168.1.155:9000
 ```
 2. Client Side:
 ```
