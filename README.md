@@ -22,12 +22,17 @@ paths:
 
 
 # General Info
-1. Stream udp traffic from Thermal USB Camera
-2. Server Side:
+1. Check Cameras
+```
+v4l2-ctl --list-devices
+
+```
+# Stream udp traffic from Thermal USB Camera
+1. Server Side:
 ```
 ffmpeg -f v4l2 -i /dev/video0 -fflags nobuffer -framerate 25 -f mpegts udp:192.168.1.155:9000
 ```
-3. Client Side:
+2. Client Side:
 ```
 ffplay -fflags nobuffer -flags low_delay -probesize 32 -analyzeduration 1 -strict experimental -framedrop -f mpegts -vf setpts=0 udp://127.0.0.1:9000
 ```
