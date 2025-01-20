@@ -27,6 +27,10 @@ paths:
 v4l2-ctl --list-devices
 
 ```
+2. Get RTSP traffic
+```
+ffplay rtsp://192.168.1.94:8554/cam
+```
 # Stream udp traffic from Thermal USB Camera
 1. Server Side:
 ```
