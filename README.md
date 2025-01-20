@@ -22,7 +22,7 @@ Server Side:
 ```
 ffmpeg -f v4l2 -i /dev/video0 -fflags nobuffer -framerate 25 -f mpegts udp:192.168.1.155:9000
 ```
-CLient Side
+Client Side
 ```
 ffplay -fflags nobuffer -flags low_delay -probesize 32 -analyzeduration 1 -strict experimental -framedrop -f mpegts -vf setpts=0 udp://127.0.0.1:9000
 ```
