@@ -14,3 +14,10 @@ paths:
 ```
 5. ./mediatx
 6. On VLC type rtsp://192.168.1.187:8554/cam
+
+
+   General Info
+1. Stream udp traffic from Thermal USB Camera
+```
+ffmpeg -f v4l2 -i /dev/video0 -framerate 10 -f mpegts udp:192.168.1.155:9000
+```
