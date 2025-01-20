@@ -1,4 +1,4 @@
-1. Download files(mediamtx_v1.10.0_linux_arm64v8.tar.gz) for Raspberry Pi from https://github.com/bluenviron/mediamtx/releases
+1. Download files(mediamtx_v1.10.0_linux_armv6.tar.gz) for Raspberry Pi from https://github.com/bluenviron/mediamtx/releases
 2. Unzip and go to directory
 3. chmod +x mediatx
 4. nano +698 mediamtx.yml and add next:
