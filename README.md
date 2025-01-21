@@ -2,7 +2,11 @@
 
 1. Download installation file
 ```
-wget https://github.com/EugeneTsymbaliuk/optical-drone/raw/refs/heads/main/installer.sh
+For GND
+wget https://github.com/EugeneTsymbaliuk/optical-drone/raw/refs/heads/main/installer_gnd.sh
+
+For Air
+wget https://github.com/EugeneTsymbaliuk/optical-drone/raw/refs/heads/main/installer_air.sh
 ```
 2. Run file
 ```
