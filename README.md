@@ -44,7 +44,7 @@ tar -xvzf mediamtx_v1.11.1_linux_armv6.tar.gz
 ```
 8. Make file executable
 ```
-chmod +x mediatx
+chmod +x mediamtx
 ```
 9. Add text in file mediamtx.yml and add text under paths:
 ```
