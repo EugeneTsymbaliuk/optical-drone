@@ -51,7 +51,6 @@ http://192.168.10.1:8889/cam
 # Installation on Air
 1. Download installation file
 ```
-For Air
 wget https://github.com/EugeneTsymbaliuk/optical-drone/raw/refs/heads/main/installer_air.sh
 ```
 2. Run file
