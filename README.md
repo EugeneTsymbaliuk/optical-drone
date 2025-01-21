@@ -2,7 +2,6 @@
 
 1. Download installation file
 ```
-For GND
 wget https://github.com/EugeneTsymbaliuk/optical-drone/raw/refs/heads/main/installer_gnd.sh
 ```
 2. Run file
