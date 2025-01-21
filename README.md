@@ -3,7 +3,7 @@
 ```
 wget https://github.com/bluenviron/mediamtx/releases/download/v1.11.1/mediamtx_v1.11.1_linux_armv6.tar.gz
 ```
-2. Unzip and go to directory
+2. Unzip file
 ```
 tar -xvzf mediamtx_v1.11.1_linux_armv6.tar.gz
 ```
