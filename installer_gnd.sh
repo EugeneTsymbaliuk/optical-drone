@@ -6,7 +6,7 @@ sudo apt -y upgrade
 touch ~/starter.sh
 echo '#!/bin/bash' >> ~/starter.sh
 echo  >> ~/starter.sh
-echo 'python ~/main.py' >> ~/starter.sh
+echo 'python ~/main_gnd.py' >> ~/starter.sh
 echo '~/mediamtx' >> ~/starter.sh
 chmod 755 ~/starter.sh
 
