@@ -7,7 +7,7 @@ touch ~/starter.sh
 echo '#!/bin/bash' >> ~/starter.sh
 echo  >> ~/starter.sh
 echo 'python ~/fly_by_ip_gnd.py' >> ~/starter.sh
-echo '~/mediatx' >> ~/starter.sh
+echo '~/mediamtx' >> ~/starter.sh
 chmod 755 ~/starter.sh
 
 # Change window manager (mutter to openbox-lxde)
