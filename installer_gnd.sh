@@ -25,11 +25,3 @@ echo 'xset s noblank' >> ~/.config/lxsession/LXDE-pi/autostart
 echo 'xset -dpms' >> ~/.config/lxsession/LXDE-pi/autostart
 echo 'xset -s off' >> ~/.config/lxsession/LXDE-pi/autostart
 echo 'chromium-browser --start-fullscreen http://192.168.10.1:8889/cam' >> ~/.config/lxsession/LXDE-pi/autostart
-
-# Enable UART1 on Raspberry pi
-
-echo 'enable_uart=1' >> /boot/config.txt
-echo 'dtoverlay=disable-bt' >> /boot/config.txt
-echo 'dtoverlay=uart0' >> /boot/config.txt
-echo '# Enable PAL on video' >> /boot/config.txt
-echo 'sdtv_mode=2' >> /boot/config.txt
