@@ -1,6 +1,6 @@
 # Installation
 
-1. Download installation files
+1. Download installation file
 ```
 wget https://github.com/EugeneTsymbaliuk/optical-drone/raw/refs/heads/main/installer.sh
 ```
