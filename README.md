@@ -11,11 +11,10 @@ tar -xvzf mediamtx_v1.11.1_linux_armv6.tar.gz
 ```
 chmod +x mediatx
 ```
-4. Add text in file mediamtx.yml:
+4. Add text in file mediamtx.yml and add text under paths:
 ```
-nano +698 mediamtx.yml
+nano +699 mediamtx.yml
 
-paths:
   cam:
     source: rpiCamera
     rpiCameraWidth: 1296
