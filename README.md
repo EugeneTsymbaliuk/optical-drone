@@ -8,14 +8,25 @@ wget https://github.com/EugeneTsymbaliuk/optical-drone/raw/refs/heads/main/insta
 ```
 sudo bash installer.sh
 ```
-3. Increase Swap to RAM size from 100Mb to 512Mb (for RP Zero) or to 2048Mb (for RP 4) 
+3. Enable UART1 on Raspberry pi. Add text in the end of the file /boot/config.txt
+```
+sudo nano /boot/config.txt
+
+enable_uart=1
+dtoverlay=disable-bt
+dtoverlay=uart0
+
+# Enable PAL on video
+sdtv_mode=2
+```
+4. Increase Swap to RAM size from 100Mb to 512Mb (for RP Zero) or to 2048Mb (for RP 4) 
 ```
 sudo dphys-swapfile swapoff
 sudo nano /etc/dphys-swapfile
 sudo dphys-swapfile setup
 sudo dphys-swapfile swapon
 ```
-4. Enable Serial Port on Raspberry pi
+5. Enable Serial Port on Raspberry pi
 ```
 sudo raspi-config
 
@@ -27,26 +38,26 @@ At the prompt “Would you like a login shell to be accessible over serial?”, 
 At the prompt “Would you like the serial port hardware to be enabled?”, answer 'Yes'
 Exit raspi-config and reboot the Raspberry Pi for changes to take effect
 ```
-5. Enable Composite Video
+6. Enable Composite Video
 ```
 sudo raspi-config
 
 - Select Option 2 - Display Options -> Composite
 ```
 - Next installation only for Air unit.
-6. Download files(mediamtx_v1.10.0_linux_armv6.tar.gz) for Raspberry Pi from https://github.com/bluenviron/mediamtx/releases
+7. Download files(mediamtx_v1.10.0_linux_armv6.tar.gz) for Raspberry Pi from https://github.com/bluenviron/mediamtx/releases
 ```
 wget https://github.com/bluenviron/mediamtx/releases/download/v1.11.1/mediamtx_v1.11.1_linux_armv6.tar.gz
 ```
-7. Unzip file
+8. Unzip file
 ```
 tar -xvzf mediamtx_v1.11.1_linux_armv6.tar.gz
 ```
-8. Make file executable
+9. Make file executable
 ```
 chmod +x mediamtx
 ```
-9. Add text in file mediamtx.yml and add text under paths:
+10. Add text in file mediamtx.yml and add text under paths:
 ```
 nano +699 mediamtx.yml
 
@@ -63,11 +74,11 @@ nano +699 mediamtx.yml
 #    runOnInitRestart: yes
 
 ```
-10. Run video streaming (only on Air)
+11. Run video streaming (only on Air)
 ```
 ./mediamtx
 ```
-11. On Ground Station go to Web-browser and type
+12. On Ground Station go to Web-browser and type
 ```
 http://192.168.10.1:8889/cam
 ```
