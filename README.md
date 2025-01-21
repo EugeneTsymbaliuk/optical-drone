@@ -3,12 +3,12 @@
 ```
 wget https://github.com/bluenviron/mediamtx/releases/download/v1.11.1/mediamtx_v1.11.1_linux_armv6.tar.gz
 ```
-3. Unzip and go to directory
+2. Unzip and go to directory
 ```
 tar -xvzf mediamtx_v1.11.1_linux_armv6.tar.gz
 ```
-5. chmod +x mediatx
-6. nano +698 mediamtx.yml and add next:
+3. chmod +x mediatx
+4. nano +698 mediamtx.yml and add next:
 ```
 paths:
   cam:
