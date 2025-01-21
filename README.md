@@ -7,7 +7,10 @@ wget https://github.com/bluenviron/mediamtx/releases/download/v1.11.1/mediamtx_v
 ```
 tar -xvzf mediamtx_v1.11.1_linux_armv6.tar.gz
 ```
-3. chmod +x mediatx
+3. Make file executable
+```
+chmod +x mediatx
+```
 4. Add text in file mediamtx.yml:
 ```
 nano +698 mediamtx.yml
