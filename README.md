@@ -10,7 +10,11 @@ wget https://github.com/EugeneTsymbaliuk/optical-drone/raw/refs/heads/main/insta
 ```
 2. Run file
 ```
-sudo bash installer.sh
+For GND:
+bash installer_gnd.sh
+bash installer_air.sh
+For Air:
+
 ```
 3. Enable UART1 on Raspberry pi. Add text in the end of the file /boot/config.txt
 ```
