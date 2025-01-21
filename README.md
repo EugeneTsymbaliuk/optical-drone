@@ -65,7 +65,7 @@ nano +699 mediamtx.yml
 ```
 10. Run video streaming (only on Air)
 ```
-./mediatx
+./mediamtx
 ```
 11. On Ground Station go to Web-browser and type
 ```
