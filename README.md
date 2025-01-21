@@ -2,7 +2,7 @@
 
 1. Download installation files
 ```
-git clone 
+wget https://github.com/EugeneTsymbaliuk/optical-drone/raw/refs/heads/main/installer.sh
 ```
 2. Run file
 ```
