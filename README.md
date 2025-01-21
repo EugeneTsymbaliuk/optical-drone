@@ -24,9 +24,14 @@ paths:
 #    runOnInitRestart: yes
 
 ```
-5. ./mediatx
-6. On VLC type rtsp://192.168.1.187:8554/cam
-
+5. Run video streaming
+```
+./mediatx
+```
+6. On Ground Station go to Web-browser and type
+```
+http://192.168.10.1:8889/cam
+```
 
 # General Info
 1. Check Cameras
