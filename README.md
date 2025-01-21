@@ -15,7 +15,7 @@ sudo nano /etc/dphys-swapfile
 sudo dphys-swapfile setup
 sudo dphys-swapfile swapon
 ```
-4. Enable SSH and Serial Port on Raspberry pi
+4. Enable Serial Port on Raspberry pi
 ```
 sudo raspi-config
 
