@@ -8,7 +8,7 @@ wget https://github.com/EugeneTsymbaliuk/optical-drone/raw/refs/heads/main/insta
 ```
 sudo bash installer.sh
 ```
-3. Increase Swap to RAM size from 100Mb to 512 or 2048 
+3. Increase Swap to RAM size from 100Mb to 512Mb (for RP Zero) or to 2048Mb (for RP 4) 
 ```
 sudo dphys-swapfile swapoff
 sudo nano /etc/dphys-swapfile
