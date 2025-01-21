@@ -33,6 +33,7 @@ sudo raspi-config
 
 - Select Option 2 - Display Options -> Composite
 ```
+Next installation only for Air unit
 6. Download files(mediamtx_v1.10.0_linux_armv6.tar.gz) for Raspberry Pi from https://github.com/bluenviron/mediamtx/releases
 ```
 wget https://github.com/bluenviron/mediamtx/releases/download/v1.11.1/mediamtx_v1.11.1_linux_armv6.tar.gz
