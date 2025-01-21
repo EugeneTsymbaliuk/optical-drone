@@ -62,7 +62,7 @@ nano +699 mediamtx.yml
 #    runOnInitRestart: yes
 
 ```
-10. Run video streaming
+10. Run video streaming (only on Air)
 ```
 ./mediatx
 ```
