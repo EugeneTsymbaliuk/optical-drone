@@ -120,6 +120,13 @@ nano +699 mediamtx.yml
 ```
 ./mediamtx
 ```
+
+# Cython
+1. Download files setup_air/gnd.py and fly_by_ip_air/gnd.pyx and run command
+```
+python setup.py build_ext --inplace
+```
+
 # General Info
 1. Check Cameras
 ```
