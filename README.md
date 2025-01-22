@@ -116,6 +116,7 @@ nano +699 mediamtx.yml
     rpiCameraVFlip: true
     rpiCameraHFlip: true
     rpiCameraBitrate: 1500000
+    rpiCameraFPS: 30
 #  For Thermal Camera
 #  cam:
 #    runOnInit: ffmpeg -f v4l2 -i /dev/video0 -tune zero_latency -framerate 25  -f mpegts -omit_video_pes_length 1 udp:192.168.1.155:9000
