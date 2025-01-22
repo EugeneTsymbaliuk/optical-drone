@@ -111,8 +111,8 @@ nano +699 mediamtx.yml
 
   cam:
     source: rpiCamera
-    rpiCameraWidth: 1296
-    rpiCameraHeight: 972
+    rpiCameraWidth: 720
+    rpiCameraHeight: 576
     rpiCameraVFlip: true
     rpiCameraHFlip: true
 #    rpiCameraBitrate: 1500000
