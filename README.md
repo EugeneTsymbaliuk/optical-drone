@@ -44,7 +44,13 @@ sudo raspi-config
 
 - Select Option 2 - Display Options -> Composite
 ```
-7. On Ground Station go to Web-browser and type
+7. Add static IP and route
+```
+sudo nano /lib/dhcpcd/dhcpcd-hooks/40-route
+
+ip route add 192.168.10.0/24 dev eth0
+``` 
+8. On Ground Station go to Web-browser and type
 ```
 http://192.168.10.1:8889/cam
 ```
@@ -116,7 +122,13 @@ nano +699 mediamtx.yml
 #    runOnInitRestart: yes
 
 ```
-10. Run video streaming
+10. Add static IP and route
+```
+sudo nano /lib/dhcpcd/dhcpcd-hooks/40-route
+
+ip route add 192.168.10.0/24 dev eth0
+``` 
+11. Run video streaming
 ```
 ./mediamtx
 ```
