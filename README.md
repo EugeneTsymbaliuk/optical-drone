@@ -1,5 +1,9 @@
 # Installation on GND
 
+Download Raspberry Pi Imager and inslall OS on Raspberry Pi (Attention): Install legacy Raspbian Bullseye 64-bit https://www.raspberrypi.com/software/
+
+Connect to Raspberry Pi, open Terminal and type all commands:
+
 1. Download installation file
 ```
 wget https://github.com/EugeneTsymbaliuk/optical-drone/raw/refs/heads/main/installer_gnd.sh
@@ -55,6 +59,10 @@ ip route add 192.168.10.0/24 dev eth0
 http://192.168.10.1:8889/cam
 ```
 # Installation on Air
+Download Raspberry Pi Imager and inslall OS on Raspberry Pi (Attention): Install legacy Raspbian Bullseye 32-bit https://www.raspberrypi.com/software/
+
+Connect to Raspberry Pi, open Terminal and type all commands:
+
 1. Download installation file
 ```
 wget https://github.com/EugeneTsymbaliuk/optical-drone/raw/refs/heads/main/installer_air.sh
