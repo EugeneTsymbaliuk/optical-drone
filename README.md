@@ -1,6 +1,7 @@
 
 ![GND](https://github.com/user-attachments/assets/ff646b30-dffd-4749-b6df-994533f1e5fe)
-![Air](https://github.com/user-attachments/assets/04d71c4f-9a7b-4531-bf83-ab8e249f7a48)
+![Air](https://github.com/user-attachments/assets/782968ab-a32a-4c4f-a173-6059ffc1c72f)
+
 
 
 
