@@ -1,5 +1,5 @@
 
-![GND](https://github.com/user-attachments/assets/ff646b30-dffd-4749-b6df-994533f1e5fe)
+![GND](https://github.com/user-attachments/assets/4c17ddf0-482c-42a7-bd2f-7fd9baa53c82)
 ![Air](https://github.com/user-attachments/assets/782968ab-a32a-4c4f-a173-6059ffc1c72f)
 
 
