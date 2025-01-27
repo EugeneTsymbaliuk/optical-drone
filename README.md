@@ -1,3 +1,9 @@
+
+![GND](https://github.com/user-attachments/assets/511ea27a-3de9-4539-b2a4-b25d1c205883)
+![Air](https://github.com/user-attachments/assets/77fc4ec0-b427-420c-9b25-3e797b266530)
+
+
+
 # Installation on GND
 
 Download Raspberry Pi Imager and inslall OS on Raspberry Pi (Attention): Install legacy Raspbian Bullseye 64-bit https://www.raspberrypi.com/software/
