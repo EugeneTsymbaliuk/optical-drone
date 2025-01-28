@@ -12,15 +12,19 @@ Download Raspberry Pi Imager and inslall OS on Raspberry Pi (Attention): Install
 
 Connect to Raspberry Pi, open Terminal and type all commands:
 
-1. Download installation file
+1. Download git repository
 ```
-wget https://github.com/EugeneTsymbaliuk/optical-drone/raw/refs/heads/main/installer_gnd.sh
+git clone https://github.com/EugeneTsymbaliuk/optical-drone.git
 ```
-2. Run file
+2. Go to directory
+```
+cd oprical-drone/
+```
+3. Run file
 ```
 bash installer_gnd.sh
 ```
-3. Enable UART1 on Raspberry pi. Add text in the end of the file /boot/config.txt
+4. Enable UART1 on Raspberry pi. Add text in the end of the file /boot/config.txt
 ```
 sudo nano /boot/config.txt
 ```
@@ -32,14 +36,14 @@ dtoverlay=uart0
 # Enable PAL on video
 sdtv_mode=2
 ```
-4. Increase Swap to RAM size from 100Mb to 2048Mb 
+5. Increase Swap to RAM size from 100Mb to 2048Mb 
 ```
 sudo dphys-swapfile swapoff
 sudo nano /etc/dphys-swapfile
 sudo dphys-swapfile setup
 sudo dphys-swapfile swapon
 ```
-5. Enable Serial Port on Raspberry pi
+6. Enable Serial Port on Raspberry pi
 ```
 sudo raspi-config
 ```
@@ -50,14 +54,15 @@ sudo raspi-config
 At the prompt “Would you like a login shell to be accessible over serial?”, answer 'No'
 At the prompt “Would you like the serial port hardware to be enabled?”, answer 'Yes'
 Exit raspi-config and reboot the Raspberry Pi for changes to take effect
-6. Enable Composite Video
+
+7. Enable Composite Video
 ```
 sudo raspi-config
 ```
 ```
 - Select Option 2 - Display Options -> Composite
 ``` 
-7. Add static IP address
+8. Add static IP address
 ```
 sudo nano /etc/network/interfaces.d/eth0
 ```
@@ -66,7 +71,7 @@ allow-hotplug eth0
 iface eth0 inet static
 address 192.168.10.2/24
 ``` 
-8. On Ground Station go to Web-browser and type
+9. On Ground Station go to Web-browser and type
 ```
 http://192.168.10.1:8889/cam
 ```
@@ -75,15 +80,19 @@ Download Raspberry Pi Imager and inslall OS on Raspberry Pi (Attention): Install
 
 Connect to Raspberry Pi, open Terminal and type all commands:
 
-1. Download installation file
+Download git repository
 ```
-wget https://github.com/EugeneTsymbaliuk/optical-drone/raw/refs/heads/main/installer_air.sh
+git clone https://github.com/EugeneTsymbaliuk/optical-drone.git
 ```
-2. Run file
+2. Go to directory
+```
+cd oprical-drone/
+```
+3. Run file
 ```
 bash installer_air.sh
 ```
-3. Enable UART1 on Raspberry pi. Add text in the end of the file /boot/config.txt
+4. Enable UART1 on Raspberry pi. Add text in the end of the file /boot/config.txt
 ```
 sudo nano /boot/config.txt
 ```
@@ -95,14 +104,14 @@ dtoverlay=uart0
 # Enable PAL on video
 sdtv_mode=2
 ```
-4. Increase Swap to RAM size from 100Mb to 512Mb 
+5. Increase Swap to RAM size from 100Mb to 512Mb 
 ```
 sudo dphys-swapfile swapoff
 sudo nano /etc/dphys-swapfile
 sudo dphys-swapfile setup
 sudo dphys-swapfile swapon
 ```
-5. Enable Serial Port on Raspberry pi
+6. Enable Serial Port on Raspberry pi
 ```
 sudo raspi-config
 ```
@@ -115,19 +124,19 @@ At the prompt “Would you like a login shell to be accessible over serial?”, 
 At the prompt “Would you like the serial port hardware to be enabled?”, answer 'Yes'
 Exit raspi-config and reboot the Raspberry Pi for changes to take effect
 ```
-6. Download files(mediamtx_v1.10.0_linux_armv6.tar.gz) for Raspberry Pi from https://github.com/bluenviron/mediamtx/releases
+7. Download files(mediamtx_v1.10.0_linux_armv6.tar.gz) for Raspberry Pi from https://github.com/bluenviron/mediamtx/releases
 ```
 wget https://github.com/bluenviron/mediamtx/releases/download/v1.11.1/mediamtx_v1.11.1_linux_armv6.tar.gz
 ```
-7. Unzip file
+8. Unzip file
 ```
 tar -xvzf mediamtx_v1.11.1_linux_armv6.tar.gz
 ```
-8. Make file executable
+9. Make file executable
 ```
 chmod +x mediamtx
 ```
-9. Add text in file mediamtx.yml and add text under paths:
+10. Add text in file mediamtx.yml and add text under paths:
 ```
 nano +699 mediamtx.yml
 
@@ -145,7 +154,7 @@ nano +699 mediamtx.yml
 #    runOnInitRestart: yes
 
 ```
-10. Add static IP address
+11. Add static IP address
 ```
 sudo nano /etc/network/interfaces.d/eth0
 ```
@@ -154,7 +163,7 @@ allow-hotplug eth0
 iface eth0 inet static
 address 192.168.10.1/24
 ``` 
-11. Run video streaming
+12. Run video streaming
 ```
 ./mediamtx
 ```
