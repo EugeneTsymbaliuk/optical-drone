@@ -3,9 +3,6 @@
 sudo apt update
 sudo apt -y upgrade
 
-wget https://github.com/EugeneTsymbaliuk/optical-drone/blob/main/fly_by_ip_gnd.py
-wget https://github.com/EugeneTsymbaliuk/optical-drone/blob/main/main_gnd.py
-
 touch ~/starter.sh
 echo '#!/bin/bash' >> ~/starter.sh
 echo  >> ~/starter.sh
