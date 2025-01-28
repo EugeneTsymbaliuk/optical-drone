@@ -6,7 +6,7 @@ sudo apt -y upgrade
 touch ~/starter.sh
 echo '#!/bin/bash' >> ~/starter.sh
 echo  >> ~/starter.sh
-echo 'python ~/main_air.py' >> ~/starter.sh
+echo 'python ~/optical-drone/main_air.py' >> ~/starter.sh
 chmod 755 ~/starter.sh
 
 # Change window manager (mutter to openbox-lxde)
