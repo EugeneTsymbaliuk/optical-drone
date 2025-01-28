@@ -53,7 +53,8 @@ Exit raspi-config and reboot the Raspberry Pi for changes to take effect
 6. Enable Composite Video
 ```
 sudo raspi-config
-
+```
+```
 - Select Option 2 - Display Options -> Composite
 ``` 
 7. Add static IP address
@@ -104,7 +105,8 @@ sudo dphys-swapfile swapon
 5. Enable Serial Port on Raspberry pi
 ```
 sudo raspi-config
-
+```
+```
 -	Select option 3 - Interface Options
 -	Select option P6 - Serial Port
 
