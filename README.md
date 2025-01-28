@@ -59,7 +59,7 @@ sudo raspi-config
 ``` 
 7. Add static IP address
 ```
-sudo nano /etc/networks/intrefaces.d/eth0
+sudo nano /etc/network/interfaces.d/eth0
 ```
 ```
 allow-hotplug eth0
@@ -147,7 +147,7 @@ nano +699 mediamtx.yml
 ```
 10. Add static IP address
 ```
-sudo nano /lib/dhcpcd/dhcpcd-hooks/40-route
+sudo nano /etc/network/interfaces.d/eth0
 ```
 ```
 allow-hotplug eth0
