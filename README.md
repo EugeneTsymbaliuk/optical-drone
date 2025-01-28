@@ -23,7 +23,8 @@ bash installer_gnd.sh
 3. Enable UART1 on Raspberry pi. Add text in the end of the file /boot/config.txt
 ```
 sudo nano /boot/config.txt
-
+```
+```
 enable_uart=1
 dtoverlay=disable-bt
 dtoverlay=uart0
@@ -41,7 +42,7 @@ sudo dphys-swapfile swapon
 5. Enable Serial Port on Raspberry pi
 ```
 sudo raspi-config
-
+```
 -	Select option 3 - Interface Options
 -	Select option P6 - Serial Port
 
@@ -49,18 +50,20 @@ sudo raspi-config
 At the prompt “Would you like a login shell to be accessible over serial?”, answer 'No'
 At the prompt “Would you like the serial port hardware to be enabled?”, answer 'Yes'
 Exit raspi-config and reboot the Raspberry Pi for changes to take effect
-```
 6. Enable Composite Video
 ```
 sudo raspi-config
 
 - Select Option 2 - Display Options -> Composite
+``` 
+7. Add static IP address
 ```
-7. Add static IP and route
+sudo nano /etc/networks/intrefaces.d/eth0
 ```
-sudo nano /lib/dhcpcd/dhcpcd-hooks/40-route
-
-ip route add 192.168.10.0/24 dev eth0
+```
+allow-hotplug eth0
+iface eth0 inet static
+address 192.168.10.2/24
 ``` 
 8. On Ground Station go to Web-browser and type
 ```
@@ -82,7 +85,8 @@ bash installer_air.sh
 3. Enable UART1 on Raspberry pi. Add text in the end of the file /boot/config.txt
 ```
 sudo nano /boot/config.txt
-
+```
+```
 enable_uart=1
 dtoverlay=disable-bt
 dtoverlay=uart0
@@ -139,11 +143,14 @@ nano +699 mediamtx.yml
 #    runOnInitRestart: yes
 
 ```
-10. Add static IP and route
+10. Add static IP address
 ```
 sudo nano /lib/dhcpcd/dhcpcd-hooks/40-route
-
-ip route add 192.168.10.0/24 dev eth0
+```
+```
+allow-hotplug eth0
+iface eth0 inet static
+address 192.168.10.1/24
 ``` 
 11. Run video streaming
 ```
