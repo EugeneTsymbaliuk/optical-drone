@@ -72,9 +72,9 @@ allow-hotplug eth0
 iface eth0 inet static
 address 192.168.10.2/24
 ``` 
-9. On Ground Station go to Web-browser and type
+9. Reboot OS
 ```
-http://192.168.10.1:8889/cam
+sudo reboot
 ```
 # Installation on Air
 Download Raspberry Pi Imager and inslall OS on Raspberry Pi (Attention): Install legacy Raspbian Bullseye 32-bit https://www.raspberrypi.com/software/
@@ -105,17 +105,19 @@ dtoverlay=uart0
 # Enable PAL on video
 sdtv_mode=2
 ```
-5. Increase Swap to RAM size from 100Mb to 512Mb 
+5. Increase Swap 
 ```
 sudo dphys-swapfile swapoff
 sudo nano /etc/dphys-swapfile
+```
+Increase SWAP size from 100Mb to 512M
+```
 sudo dphys-swapfile setup
 sudo dphys-swapfile swapon
 ```
 6. Enable Serial Port on Raspberry pi
 ```
 sudo raspi-config
-```
 ```
 -	Select option 3 - Interface Options
 -	Select option P6 - Serial Port
@@ -124,7 +126,6 @@ sudo raspi-config
 At the prompt “Would you like a login shell to be accessible over serial?”, answer 'No'
 At the prompt “Would you like the serial port hardware to be enabled?”, answer 'Yes'
 Exit raspi-config and reboot the Raspberry Pi for changes to take effect
-```
 7. Download files(mediamtx_v1.10.0_linux_armv6.tar.gz) for Raspberry Pi from https://github.com/bluenviron/mediamtx/releases
 ```
 wget https://github.com/bluenviron/mediamtx/releases/download/v1.11.1/mediamtx_v1.11.1_linux_armv6.tar.gz
@@ -164,9 +165,9 @@ allow-hotplug eth0
 iface eth0 inet static
 address 192.168.10.1/24
 ``` 
-12. Run video streaming
+12. Reboot OS
 ```
-./mediamtx
+sudo reboot
 ```
 
 # Cython
