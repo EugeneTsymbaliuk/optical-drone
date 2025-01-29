@@ -36,7 +36,7 @@ dtoverlay=uart0
 # Enable PAL on video
 sdtv_mode=2
 ```
-5. Increase Swap 
+5. Increase Swap
 ```
 sudo dphys-swapfile swapoff
 sudo nano /etc/dphys-swapfile
