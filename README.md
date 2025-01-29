@@ -36,10 +36,13 @@ dtoverlay=uart0
 # Enable PAL on video
 sdtv_mode=2
 ```
-5. Increase Swap to RAM size from 100Mb to 2048Mb 
+5. Increase Swap 
 ```
 sudo dphys-swapfile swapoff
 sudo nano /etc/dphys-swapfile
+```
+ Increase SWAP size from 100Mb to 2048Mb
+```
 sudo dphys-swapfile setup
 sudo dphys-swapfile swapon
 ```
@@ -59,9 +62,7 @@ Exit raspi-config and reboot the Raspberry Pi for changes to take effect
 ```
 sudo raspi-config
 ```
-```
 - Select Option 2 - Display Options -> Composite
-``` 
 8. Add static IP address
 ```
 sudo nano /etc/network/interfaces.d/eth0
