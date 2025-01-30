@@ -18,7 +18,7 @@ git clone https://github.com/EugeneTsymbaliuk/optical-drone.git
 ```
 2. Go to directory
 ```
-cd oprical-drone/
+cd optical-drone/
 ```
 3. Run file
 ```
