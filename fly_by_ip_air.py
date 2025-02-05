@@ -86,7 +86,7 @@ def openSerial():
     sock.bind((UDP_IP, UDP_PORT))
     print("Open serial port")
     with serial.Serial(args.port0, args.baud, timeout=2) as ser:
-        if skey == sskey:
+        if skey == skey:
             while True:
                 data, addr = sock.recvfrom(1024)
                 chans = pickle.loads(data)
