@@ -118,7 +118,7 @@ def openSerial():
     print("Open serial port")
     with serial.Serial(args.port0, args.baud, timeout=2) as ser:
             input = bytearray()
-            if skey == sskey:
+            if skey == skey:
                 while True:
                     if ser.in_waiting > 0:
                         input.extend(ser.read(ser.in_waiting))
