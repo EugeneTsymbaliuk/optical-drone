@@ -130,7 +130,7 @@ Exit raspi-config and reboot the Raspberry Pi for changes to take effect
 
 7. Go to directory
 ```
-cd ~/optical-drone/
+cd ~/
 ```
 
 8. Download files(mediamtx_v1.10.0_linux_armv6.tar.gz) for Raspberry Pi from https://github.com/bluenviron/mediamtx/releases
