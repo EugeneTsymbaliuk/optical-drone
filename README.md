@@ -176,12 +176,6 @@ address 192.168.10.1/24
 sudo reboot
 ```
 
-# Cython
-1. Download files setup_air/gnd.py and fly_by_ip_air/gnd.pyx and run command
-```
-python setup.py build_ext --inplace
-```
-
 # General Info
 1. Check Cameras
 ```
