@@ -7,6 +7,3 @@ import fly_by_ip_air
 
 Thread(target=fly_by_ip_air.openSerial).start()
 
-call(['/home/admin/optical-drone/mediamtx'])
-
-
