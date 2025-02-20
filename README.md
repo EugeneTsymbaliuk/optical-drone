@@ -142,7 +142,8 @@ chmod +x mediamtx
 10. Add text in file mediamtx.yml and add text under paths:
 ```
 nano +699 mediamtx.yml
-
+```
+```
   cam:
     source: rpiCamera
     rpiCameraWidth: 720
