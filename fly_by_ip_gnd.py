@@ -143,7 +143,7 @@ def openSerial():
                                 if ser.in_waiting > 0:
                                     input.extend(ser.read(ser.in_waiting))
                                 else:
-                                    print(chans)
+                                    #print(chans)
                                     message = pickle.dumps(chans)
                                     sock.sendto(message, (UDP_IP, UDP_PORT))
                         else:
