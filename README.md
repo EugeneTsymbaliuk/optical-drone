@@ -149,8 +149,8 @@ add next text with according space
 ```
   cam:
     source: rpiCamera
-    rpiCameraWidth: 720
-    rpiCameraHeight: 576
+    rpiCameraWidth: 1296
+    rpiCameraHeight: 972
     rpiCameraVFlip: true
     rpiCameraHFlip: true
     rpiCameraBitrate: 1500000
