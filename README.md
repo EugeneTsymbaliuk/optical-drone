@@ -19,7 +19,7 @@ git clone https://github.com/EugeneTsymbaliuk/optical-drone.git
 ```
 2. Go to directory
 ```
-cd optical-drone/
+cd ~/optical-drone/
 ```
 3. Run file
 ```
@@ -88,7 +88,7 @@ git clone https://github.com/EugeneTsymbaliuk/optical-drone.git
 ```
 2. Go to directory
 ```
-cd optical-drone/
+cd ~/optical-drone/
 ```
 3. Run file
 ```
@@ -128,19 +128,24 @@ At the prompt “Would you like a login shell to be accessible over serial?”, 
 At the prompt “Would you like the serial port hardware to be enabled?”, answer 'Yes'
 Exit raspi-config and reboot the Raspberry Pi for changes to take effect
 
-7. Download files(mediamtx_v1.10.0_linux_armv6.tar.gz) for Raspberry Pi from https://github.com/bluenviron/mediamtx/releases
+7. Go to directory
+```
+cd ~/optical-drone/
+```
+
+8. Download files(mediamtx_v1.10.0_linux_armv6.tar.gz) for Raspberry Pi from https://github.com/bluenviron/mediamtx/releases
 ```
 wget https://github.com/bluenviron/mediamtx/releases/download/v1.11.1/mediamtx_v1.11.1_linux_armv6.tar.gz
 ```
-8. Unzip file
+9. Unzip file
 ```
 tar -xvzf mediamtx_v1.11.1_linux_armv6.tar.gz
 ```
-9. Make file executable
+10. Make file executable
 ```
 chmod +x mediamtx
 ```
-10. Add text in file mediamtx.yml and add text under paths:
+11. Add text in file mediamtx.yml and add text under paths:
 ```
 nano +699 mediamtx.yml
 ```
@@ -162,7 +167,7 @@ add next text with according space
 #    runOnInitRestart: yes
 
 ```
-11. Add static IP address
+12. Add static IP address
 ```
 sudo nano /etc/network/interfaces.d/eth0
 ```
@@ -171,7 +176,7 @@ allow-hotplug eth0
 iface eth0 inet static
 address 192.168.10.1/24
 ``` 
-12. Reboot OS
+13. Reboot OS
 ```
 sudo reboot
 ```
