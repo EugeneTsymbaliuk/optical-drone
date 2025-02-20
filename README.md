@@ -143,6 +143,9 @@ chmod +x mediamtx
 ```
 nano +699 mediamtx.yml
 ```
+Under line paths: 
+add next text with according space
+
 ```
   cam:
     source: rpiCamera
