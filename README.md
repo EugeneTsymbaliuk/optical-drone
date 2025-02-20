@@ -122,11 +122,12 @@ sudo raspi-config
 ```
 -	Select option 3 - Interface Options
 -	Select option P6 - Serial Port
-
+```
 (Attention):
 At the prompt “Would you like a login shell to be accessible over serial?”, answer 'No'
 At the prompt “Would you like the serial port hardware to be enabled?”, answer 'Yes'
 Exit raspi-config and reboot the Raspberry Pi for changes to take effect
+```
 7. Download files(mediamtx_v1.10.0_linux_armv6.tar.gz) for Raspberry Pi from https://github.com/bluenviron/mediamtx/releases
 ```
 wget https://github.com/bluenviron/mediamtx/releases/download/v1.11.1/mediamtx_v1.11.1_linux_armv6.tar.gz
