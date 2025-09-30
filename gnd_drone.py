@@ -2,8 +2,6 @@
 
 import socket
 import pickle
-#import serial
-#import argparse
 from time import time, sleep
 from threading import Thread
 from dronekit import connect, VehicleMode
