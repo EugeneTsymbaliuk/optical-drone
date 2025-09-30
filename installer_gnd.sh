@@ -26,3 +26,4 @@ echo 'xset -s off' >> ~/.config/lxsession/LXDE-pi/autostart
 echo 'chromium-browser --start-fullscreen http://192.168.10.1:8889/cam' >> ~/.config/lxsession/LXDE-pi/autostart
 
 rm ~/optical-drone/*air*
+rm ~/optical-drone/gnd_drone.py
