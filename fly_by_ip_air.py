@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 
+"""
+Check CPU Serial Number. 
+cat /proc/cpuinfo
+"""
+
 import socket
 import pickle
 import serial
