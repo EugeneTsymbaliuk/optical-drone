@@ -6,6 +6,7 @@ import serial
 import argparse
 from time import time, sleep
 from threading import Thread
+from dronekit import connect, VehicleMode
 
 fps = 0
 # Bounding Box
@@ -23,6 +24,12 @@ parser = argparse.ArgumentParser()
 parser.add_argument('-p0', '--port0', default='/dev/ttyAMA0', required=False)
 parser.add_argument('-b', '--baud', default=420000, required=False)
 args = parser.parse_args()
+
+# Create the connection to drone
+print('Connecting to FC')
+#vehicle = connect('tcp:192.168.1.145:5762', rate=40)
+vehicle = connect("/dev/ttyAMA0", baud=57600, wait_ready=True,  timeout=100, rate=40)
+print('Connected to FC')
 
 def sinfo():
     global skey
