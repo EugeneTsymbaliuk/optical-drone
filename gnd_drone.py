@@ -96,8 +96,8 @@ def openSerial():
     with serial.Serial(args.port0, args.baud, timeout=2) as ser:
         if skey == skey:
             while True:
-                #data, addr = sock.recvfrom(1024)
-                #chans = pickle.loads(data)
+                data, addr = sock.recvfrom(1024)
+                chans = pickle.loads(data)
                 #ser.write(channelsCrsfToChannelsPacket(chans))
                 rcOverrides(pwmCalc(chans[0]), pwmCalc(chans[1]), pwmCalc(chans[2]), pwmCalc(chans[3]))
     
