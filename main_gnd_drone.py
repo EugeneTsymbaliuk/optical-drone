@@ -1,8 +1,8 @@
 
 #! /usr/bin/env python
 
-import fly_by_ip_gnd
+import gnd_drone
 from time import sleep
 
 sleep(20)
-fly_by_ip_gnd.openSerial()
+gnd_drone.openSerial()
