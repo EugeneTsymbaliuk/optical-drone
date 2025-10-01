@@ -1,13 +1,7 @@
 
-![GND](https://github.com/user-attachments/assets/4c17ddf0-482c-42a7-bd2f-7fd9baa53c82)
-![406905698-782968ab-a32a-4c4f-a173-6059ffc1c72f](https://github.com/user-attachments/assets/9a05a59d-1232-4fbc-ad0a-aab2f2a22201)
-
-
-
-
-
-
 # Installation on Ground Station
+
+![GND](https://github.com/user-attachments/assets/4c17ddf0-482c-42a7-bd2f-7fd9baa53c82)
 
 Download Raspberry Pi Imager and inslall OS on Raspberry Pi (Attention): Install legacy Raspbian Bullseye 64-bit https://www.raspberrypi.com/software/
 
@@ -77,7 +71,10 @@ address 192.168.10.2/24
 ```
 sudo reboot
 ```
-# Installation on Air
+# Installation on Air (Quadrocopter)
+
+![406905698-782968ab-a32a-4c4f-a173-6059ffc1c72f](https://github.com/user-attachments/assets/9a05a59d-1232-4fbc-ad0a-aab2f2a22201)
+
 Download Raspberry Pi Imager and inslall OS on Raspberry Pi (Attention): Install legacy Raspbian Bullseye 32-bit https://www.raspberrypi.com/software/
 
 Connect to Raspberry Pi, open Terminal and type all commands:
