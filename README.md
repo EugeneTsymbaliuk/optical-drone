@@ -183,9 +183,9 @@ sudo reboot
 # Ground Drone on Arupilot
 <img width="1672" height="2418" alt="449161784-402f1190-5ed0-4b07-8406-937da907502e" src="https://github.com/user-attachments/assets/f7ad5123-de71-4c74-8c2c-9517da712c21" />
 1. Enable Mavlink on UART
-2. 
+```
 <img width="581" height="549" alt="Capture" src="https://github.com/user-attachments/assets/b70c132b-7cc5-492d-812b-ec54bfdb6248" />
-
+```
 
 
 # General Info
