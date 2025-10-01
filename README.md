@@ -7,7 +7,7 @@
 
 
 
-# Installation on GND
+# Installation on Ground Station
 
 Download Raspberry Pi Imager and inslall OS on Raspberry Pi (Attention): Install legacy Raspbian Bullseye 64-bit https://www.raspberrypi.com/software/
 
