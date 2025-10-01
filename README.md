@@ -285,7 +285,7 @@ address 192.168.10.1/24
 ```
 sudo reboot
 ```
-13. Enable Mavlink on UART
+13. Enable Mavlink on UART in Mission Planner
 
 <img width="581" height="549" alt="Capture" src="https://github.com/user-attachments/assets/b70c132b-7cc5-492d-812b-ec54bfdb6248" />
 
