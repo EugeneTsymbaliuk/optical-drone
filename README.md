@@ -180,7 +180,7 @@ address 192.168.10.1/24
 ```
 sudo reboot
 ```
-# Ground Drone on Ardupilot
+# Installation on Ground Drone (Ardupilot)
 <img width="1672" height="2418" alt="449161784-402f1190-5ed0-4b07-8406-937da907502e" src="https://github.com/user-attachments/assets/40e37900-b431-4b04-8f62-87aaad960694" />
 
 
