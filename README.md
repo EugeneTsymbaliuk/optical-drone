@@ -181,7 +181,8 @@ address 192.168.10.1/24
 sudo reboot
 ```
 # Ground Drone on Ardupilot
-<img width="1672" height="2418" alt="449161784-402f1190-5ed0-4b07-8406-937da907502e" src="https://github.com/user-attachments/assets/f7ad5123-de71-4c74-8c2c-9517da712c21" />
+<img width="1672" height="2418" alt="449161784-402f1190-5ed0-4b07-8406-937da907502e" src="https://github.com/user-attachments/assets/40e37900-b431-4b04-8f62-87aaad960694" />
+
 
 1. Download Raspberry Pi Imager and inslall OS on Raspberry Pi (Attention): Install legacy Raspbian Bullseye 32-bit https://www.raspberrypi.com/software/
 
