@@ -3,6 +3,9 @@
 sudo apt update
 sudo apt -y upgrade
 
+pip3 install future
+pip3 install dronekit
+
 touch ~/starter.sh
 echo '#!/bin/bash' >> ~/starter.sh
 echo  >> ~/starter.sh
@@ -26,4 +29,3 @@ echo 'xset -s off' >> ~/.config/lxsession/LXDE-pi/autostart
 echo 'chromium-browser --start-fullscreen http://192.168.10.1:8889/cam' >> ~/.config/lxsession/LXDE-pi/autostart
 
 rm ~/optical-drone/*air*
-rm ~/optical-drone/gnd_drone.py
