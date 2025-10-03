@@ -3,6 +3,11 @@
 sudo apt update
 sudo apt -y upgrade
 
+sudo rm /usr/lib/python3.13/EXTERNALLY-MANAGED
+
+pip3 install future
+pip3 install dronekit
+
 touch ~/starter.sh
 echo '#!/bin/bash' >> ~/starter.sh
 echo  >> ~/starter.sh
