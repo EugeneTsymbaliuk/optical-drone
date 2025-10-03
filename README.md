@@ -91,7 +91,7 @@ cd ~/optical-drone/
 ```
 3. Run file
 ```
-bash installer_gnd_drone.sh
+bash installer_air.sh
 ```
 4. Enable UART1 on Raspberry pi. Add text in the end of the file /boot/config.txt
 ```
@@ -177,7 +177,7 @@ sudo raspi-config
 - Select option B1 - Console
 13. Open crontab
 ```
-@reboot sleep 20; /usr/bin/python3 ~/optical-drone/main_gnd_drone.py &
+@reboot sleep 20; /usr/bin/python3 ~/optical-drone/main_air.py &
 ```
 14. Add static IP address
 ```
