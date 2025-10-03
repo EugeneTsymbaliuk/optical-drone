@@ -3,8 +3,6 @@
 sudo apt update
 sudo apt -y upgrade
 
-sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
-
 pip3 install future
 pip3 install dronekit
 
