@@ -275,7 +275,18 @@ sudo systemctl daemon-reload
 sudo systemctl enable mediamtx
 sudo systemctl start mediamtx
 ```
-12. Add static IP address
+12. Disable Desktop
+```
+sudo raspi-config
+```
+- Select option 1 - System Options
+- Select option S5 - Boot / Autologin
+- Select option B1 - Console
+13. Open crontab
+```
+@reboot sleep 20; /usr/bin/python3 ~/optical-drone/main_gnd_drone.py &
+```
+14. Add static IP address
 ```
 sudo nano /etc/network/interfaces.d/eth0
 ```
@@ -284,11 +295,11 @@ allow-hotplug eth0
 iface eth0 inet static
 address 192.168.10.1/24
 ``` 
-13. Reboot OS
+15. Reboot OS
 ```
 sudo reboot
 ```
-13. Enable Mavlink on UART in Mission Planner
+16. Enable Mavlink on UART in Mission Planner
 
 <img width="581" height="549" alt="Capture" src="https://github.com/user-attachments/assets/b70c132b-7cc5-492d-812b-ec54bfdb6248" />
 
