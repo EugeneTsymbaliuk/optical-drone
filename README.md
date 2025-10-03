@@ -238,28 +238,9 @@ Exit raspi-config and reboot the Raspberry Pi for changes to take effect
 ```
 cd ~/
 ```
-
-8. Download files(mediamtx_v1.10.0_linux_armv6.tar.gz) for Raspberry Pi from https://github.com/bluenviron/mediamtx/releases
+8. Add text in file mediamtx.yml and add text under paths:
 ```
-wget https://github.com/bluenviron/mediamtx/releases/download/v1.11.1/mediamtx_v1.11.1_linux_armv6.tar.gz
-```
-9. Unzip file
-```
-tar -xvzf mediamtx_v1.11.1_linux_armv6.tar.gz
-```
-10. Make file executable
-```
-chmod +x mediamtx
-```
-11. Add text in file mediamtx.yml and add text under paths:
-```
-nano +699 mediamtx.yml
-```
-Under line paths: 
-add next text with according space
-
-```
-  cam:
+cam:
     source: rpiCamera
     rpiCameraWidth: 1296
     rpiCameraHeight: 972
@@ -271,7 +252,28 @@ add next text with according space
 #  cam:
 #    runOnInit: ffmpeg -f v4l2 -i /dev/video0 -tune zero_latency -framerate 25  -f mpegts -omit_video_pes_length 1 udp:192.168.1.155:9000
 #    runOnInitRestart: yes
-
+```
+9. Move the server executable and configuration in global folders
+```
+sudo mv mediamtx /usr/local/bin/
+sudo mv mediamtx.yml /usr/local/etc/
+```
+10. Create a systemd service:
+```
+sudo tee /etc/systemd/system/mediamtx.service >/dev/null << EOF
+[Unit]
+Wants=network.target
+[Service]
+ExecStart=/usr/local/bin/mediamtx /usr/local/etc/mediamtx.yml
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+11. Enable and start the service:
+```
+sudo systemctl daemon-reload
+sudo systemctl enable mediamtx
+sudo systemctl start mediamtx
 ```
 12. Add static IP address
 ```
