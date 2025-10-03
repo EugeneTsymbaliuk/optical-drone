@@ -3,7 +3,8 @@
 
 ![GND](https://github.com/user-attachments/assets/4c17ddf0-482c-42a7-bd2f-7fd9baa53c82)
 
-Download Raspberry Pi Imager and inslall OS on Raspberry Pi (Attention): Install legacy Raspbian Bullseye 64-bit https://www.raspberrypi.com/software/
+Download Raspberry Pi Imager and inslall OS on Raspberry Pi (Attention): Install legacy Raspbian Bullseye 64-bit
+https://downloads.raspberrypi.com/raspios_oldstable_arm64/images/raspios_oldstable_arm64-2025-05-07/2025-05-06-raspios-bullseye-arm64.img.xz
 
 Connect to Raspberry Pi, open Terminal and type all commands:
 
@@ -75,7 +76,8 @@ sudo reboot
 
 ![406905698-782968ab-a32a-4c4f-a173-6059ffc1c72f](https://github.com/user-attachments/assets/9a05a59d-1232-4fbc-ad0a-aab2f2a22201)
 
-Download Raspberry Pi Imager and inslall OS on Raspberry Pi (Attention): Install legacy Raspbian Bullseye 32-bit https://www.raspberrypi.com/software/
+Download Raspberry Pi Imager and inslall OS on Raspberry Pi (Attention): Install legacy Raspbian Bullseye 32-bit
+https://downloads.raspberrypi.com/raspios_oldstable_full_armhf/images/raspios_oldstable_full_armhf-2025-05-07/2025-05-06-raspios-bullseye-armhf-full.img.xz
 
 Connect to Raspberry Pi, open Terminal and type all commands:
 
@@ -181,7 +183,8 @@ sudo reboot
 <img width="1672" height="2418" alt="449161784-402f1190-5ed0-4b07-8406-937da907502e" src="https://github.com/user-attachments/assets/40e37900-b431-4b04-8f62-87aaad960694" />
 
 
-1. Download Raspberry Pi Imager and inslall OS on Raspberry Pi (Attention): Install legacy Raspbian Bullseye 32-bit https://www.raspberrypi.com/software/
+1. Download Raspberry Pi Imager and inslall OS on Raspberry Pi (Attention): Install legacy Raspbian Bullseye 32-bit
+https://downloads.raspberrypi.com/raspios_oldstable_full_armhf/images/raspios_oldstable_full_armhf-2025-05-07/2025-05-06-raspios-bullseye-armhf-full.img.xz
 
 Connect to Raspberry Pi, open Terminal and type all commands:
 
