@@ -300,6 +300,9 @@ sudo raspi-config
 - Select option B1 - Console
 13. Open crontab
 ```
+crontab -e
+```
+```
 @reboot sleep 20; /usr/bin/python3 ~/optical-drone/main_gnd_drone.py &
 ```
 14. Add static IP address
