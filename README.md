@@ -253,6 +253,9 @@ cd ~/
 ```
 8. Add text in file mediamtx.yml and add text under paths:
 ```
+nano +699 mediamtx.ym
+```
+```
 cam:
     source: rpiCamera
     rpiCameraWidth: 1296
