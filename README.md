@@ -287,7 +287,7 @@ allow-hotplug eth0
 iface eth0 inet static
 address 192.168.10.1/24
 ``` 
-15. To work dronekit in python from 3.11 you need to
+15. To work dronekit in python from 3.13 you need to
 ```
 nano +2689 ~/.local/lib/python3.13/site-packages/dronekit/__init__.py
 change collections.MutableMapping on collections.abc.MuttableMapping
