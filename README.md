@@ -48,7 +48,11 @@ allow-hotplug eth0
 iface eth0 inet static
 address 192.168.10.2/24
 ``` 
-7. Open crontab
+7. Open crontab 
+```
+crontab -e
+```
+and add next at the file end
 ```
 @reboot sleep 20; /usr/bin/python3 ~/optical-drone/main_gnd.py &
 ```
@@ -158,7 +162,15 @@ allow-hotplug eth0
 iface eth0 inet static
 address 192.168.10.1/24
 ``` 
-14. Reboot OS
+14. Open crontab 
+```
+crontab -e
+```
+and add next at the file end
+```
+@reboot sleep 20; /usr/bin/python3 ~/optical-drone/main_air.py &
+```
+15. Reboot OS
 ```
 sudo reboot
 ```
@@ -262,6 +274,7 @@ sudo raspi-config
 ```
 crontab -e
 ```
+and add next at the file end
 ```
 @reboot sleep 20; /usr/bin/python3 ~/optical-drone/main_gnd_drone.py &
 ```
