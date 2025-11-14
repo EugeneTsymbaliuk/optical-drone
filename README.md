@@ -48,7 +48,11 @@ allow-hotplug eth0
 iface eth0 inet static
 address 192.168.10.2/24
 ``` 
-7. Reboot OS
+7. Open crontab
+```
+@reboot sleep 20; /usr/bin/python3 ~/optical-drone/main_gnd.py &
+```
+8. Reboot OS
 ```
 sudo reboot
 ```
