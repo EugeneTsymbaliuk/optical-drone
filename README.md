@@ -182,21 +182,21 @@ Install latest OS on RPi.
 
 Connect to Raspberry Pi, open Terminal and type all commands:
 
-1.Download git repository
+1. Delete EXTERNALLY-MANAGED
+```
+sudo rm /usr/lib/python3.13/EXTERNALLY-MANAGED
+```
+2.Download git repository
 ```
 git clone https://github.com/EugeneTsymbaliuk/optical-drone.git
 ```
-2. Go to directory
+3. Go to directory
 ```
 cd ~/optical-drone/
 ```
-3. Run file
+4. Run file
 ```
 bash installer_gnd_drone.sh
-```
-4. Delete EXTERNALLY-MANAGED
-```
-sudo rm /usr/lib/python3.13/EXTERNALLY-MANAGED
 ```
 5. Enable UART1 on Raspberry pi. Add text in the end of the file /boot/config.txt
 ```
