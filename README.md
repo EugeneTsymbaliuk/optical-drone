@@ -1,10 +1,8 @@
 
 # Installation on Ground Station
 
-![GND](https://github.com/user-attachments/assets/4c17ddf0-482c-42a7-bd2f-7fd9baa53c82)
-
-Download Raspberry Pi Imager and inslall OS on Raspberry Pi (Attention): Install legacy Raspbian Bullseye 64-bit
-https://downloads.raspberrypi.com/raspios_oldstable_arm64/images/raspios_oldstable_arm64-2025-05-07/2025-05-06-raspios-bullseye-arm64.img.xz
+Ground Station as tested on RP3, p4 & RP5.
+Install latest OS on RPi.
 
 Connect to Raspberry Pi, open Terminal and type all commands:
 
@@ -22,27 +20,14 @@ bash installer_gnd.sh
 ```
 4. Enable UART1 on Raspberry pi. Add text in the end of the file /boot/config.txt
 ```
-sudo nano /boot/config.txt
+sudo nano /boot/firmware/config.txt
 ```
 ```
 enable_uart=1
 dtoverlay=disable-bt
 dtoverlay=uart0
-
-# Enable PAL on video
-sdtv_mode=2
 ```
-5. Increase Swap
-```
-sudo dphys-swapfile swapoff
-sudo nano /etc/dphys-swapfile
-```
- Increase SWAP size from 100Mb to 2048Mb
-```
-sudo dphys-swapfile setup
-sudo dphys-swapfile swapon
-```
-6. Enable Serial Port on Raspberry pi
+5. Enable Serial Port on Raspberry pi
 ```
 sudo raspi-config
 ```
@@ -54,12 +39,7 @@ At the prompt “Would you like a login shell to be accessible over serial?”, 
 At the prompt “Would you like the serial port hardware to be enabled?”, answer 'Yes'
 Exit raspi-config and reboot the Raspberry Pi for changes to take effect
 
-7. Enable Composite Video
-```
-sudo raspi-config
-```
-- Select Option 2 - Display Options -> Composite
-8. Add static IP address
+6. Add static IP address
 ```
 sudo nano /etc/network/interfaces.d/eth0
 ```
@@ -68,7 +48,7 @@ allow-hotplug eth0
 iface eth0 inet static
 address 192.168.10.2/24
 ``` 
-9. Reboot OS
+7. Reboot OS
 ```
 sudo reboot
 ```
