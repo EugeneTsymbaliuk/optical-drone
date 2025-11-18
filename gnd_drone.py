@@ -23,12 +23,7 @@ sskey = '00000000ca127702'
 # Create the connection to drone
 print('Connecting to FC')
 #vehicle = connect('tcp:192.168.1.145:5762', rate=40)
-#while not True:
-#    try:
 vehicle = connect("/dev/ttyAMA0", baud=57600, wait_ready=True,  timeout=100, rate=40)
-#    except dronekit.APIException:
-#        print("FC Unavailable")
-
 print('Connected to FC')
 
 def sinfo():
@@ -63,7 +58,7 @@ def openSerial():
             #rcOverrides(pwmCalc(chans[0]), pwmCalc(chans[1]))
 #                try:
 #                    if pwmCalc(chans[0]) and pwmCalc(chans[1]) < 2100:
-                print(pwmCalc(chans[0]), pwmCalc(chans[1]), pwmCalc(chans[5]))
+                #print(pwmCalc(chans[0]), pwmCalc(chans[1]), pwmCalc(chans[5]))
                 rcOverrides(pwmCalc(chans[0]), pwmCalc(chans[1]), arm=pwmCalc(chans[5]))
 #                except struct.error:
 #                    pass
