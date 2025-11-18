@@ -7,7 +7,6 @@ cat /proc/cpuinfo
 
 import socket
 import pickle
-import struct
 from time import time, sleep
 from threading import Thread
 from dronekit import connect, VehicleMode
