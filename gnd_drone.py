@@ -51,19 +51,9 @@ def openSerial():
             data, addr = sock.recvfrom(1024)
             chans = pickle.loads(data)
             if chans[0] > 1:
-            #print(chans)
                # print(chans[0], chans[1])
-            #rcOverrides(chans[0], chans[1], chans[2], chans[3], chans[5])
-            #print(pwmCalc(chans[0]), pwmCalc(chans[1]))
-            #rcOverrides(pwmCalc(chans[0]), pwmCalc(chans[1]))
-#                try:
-#                    if pwmCalc(chans[0]) and pwmCalc(chans[1]) < 2100:
-                #print(pwmCalc(chans[0]), pwmCalc(chans[1]), pwmCalc(chans[5]))
+               #print(pwmCalc(chans[0]), pwmCalc(chans[1]))
                 rcOverrides(pwmCalc(chans[0]), pwmCalc(chans[1]), arm=pwmCalc(chans[5]))
-#                except struct.error:
-#                    pass
-#                except NameError:
-#                    pass
             sleep(0.01)
 
     return bytes(chans)
