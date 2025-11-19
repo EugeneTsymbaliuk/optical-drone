@@ -45,20 +45,21 @@ def openSerial():
     sinfo()
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.bind((UDP_IP, UDP_PORT))
+    sock.settimeout(3.0)
     if skey == skey:
         while True:
-            data, addr = sock.recvfrom(1024)
-            chans = pickle.loads(data)
-            if chans[0] > 1:
-               # print(chans[0], chans[1])
-               #print(pwmCalc(chans[0]), pwmCalc(chans[1]))
-                rcOverrides(pwmCalc(chans[0]), pwmCalc(chans[1]), arm=pwmCalc(chans[5]))
-                sleep(0.01)
-            else:
-                #print("STOP!")
-                sleep(5)
+            try:
+                data, addr = sock.recvfrom(1024)
+                chans = pickle.loads(data)
+                if chans[0] > 1:
+                    #print(chans[0], chans[1])
+                    #print(pwmCalc(chans[0]), pwmCalc(chans[1]))
+                    rcOverrides(pwmCalc(chans[0]), pwmCalc(chans[1]), arm=pwmCalc(chans[5]))
+                    sleep(0.01)
+            except TimeoutError:
+                print("STOP!")
                 rcOverrides(1500, 1500)
-
+                pass
     return bytes(chans)
 
 if __name__ == "__main__":
