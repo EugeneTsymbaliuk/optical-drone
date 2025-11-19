@@ -57,7 +57,7 @@ def openSerial():
                     rcOverrides(pwmCalc(chans[0]), pwmCalc(chans[1]), arm=pwmCalc(chans[5]))
                     sleep(0.01)
             except TimeoutError:
-                print("STOP!")
+                #print("STOP!")
                 rcOverrides(1500, 1500)
                 pass
     return bytes(chans)
