@@ -53,7 +53,7 @@ def openSerial():
                # print(chans[0], chans[1])
                #print(pwmCalc(chans[0]), pwmCalc(chans[1]))
                 rcOverrides(pwmCalc(chans[0]), pwmCalc(chans[1]), arm=pwmCalc(chans[5]))
-            sleep(0.01)
+                sleep(0.01)
             else:
                 print("STOP!")
                 sleep(5)
