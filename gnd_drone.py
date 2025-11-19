@@ -54,6 +54,9 @@ def openSerial():
                #print(pwmCalc(chans[0]), pwmCalc(chans[1]))
                 rcOverrides(pwmCalc(chans[0]), pwmCalc(chans[1]), arm=pwmCalc(chans[5]))
             sleep(0.01)
+            else:
+                sleep(5)
+                rcOverrides(1500, 1500)
 
     return bytes(chans)
 
