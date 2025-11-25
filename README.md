@@ -59,7 +59,7 @@ crontab -e
 ```
 <img width="660" height="208" alt="4" src="https://github.com/user-attachments/assets/e067e245-adc4-44bf-8623-d2339ef849f0" />
 
-and add next at the file end
+type 1 and add next at the file end
 ```
 @reboot sleep 20; /usr/bin/python3 ~/optical-drone/main_gnd.py &
 ```
