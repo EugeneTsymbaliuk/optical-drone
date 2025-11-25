@@ -1,6 +1,7 @@
 
 # Installation on Ground Station
-![Uploading Screenshot 2025-11-17 115812.png…]()
+<img width="786" height="571" alt="Screenshot 2025-11-17 115812" src="https://github.com/user-attachments/assets/726fd13e-9e3a-4c4a-b0fb-5a5be12e147a" />
+
 
 Ground Station as tested on RP3, p4 & RP5.
 Install latest OS on RPi.
