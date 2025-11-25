@@ -129,6 +129,8 @@ cd ~/
   #    runOnInit: ffmpeg -f v4l2 -i /dev/video0 -tune zero_latency -framerate 25  -f mpegts -omit_video_pes_length 1 udp:192.168.1.155:9000
   #    runOnInitRestart: yes
 ```
+<img width="923" height="417" alt="2" src="https://github.com/user-attachments/assets/e5b6606a-1f56-4d69-b926-8c806c9b90ef" />
+
 8. Move the server executable and configuration in global folders
 ```
 sudo mv mediamtx /usr/local/bin/
@@ -250,6 +252,8 @@ nano +699 mediamtx.yml
   #    runOnInit: ffmpeg -f v4l2 -i /dev/video0 -tune zero_latency -framerate 25  -f mpegts -omit_video_pes_length 1 udp:192.168.1.155:9000
   #    runOnInitRestart: yes
 ```
+<img width="923" height="417" alt="2" src="https://github.com/user-attachments/assets/2af5f1c6-f252-4c09-b245-2bc9c4e7b6d2" />
+
 9. Move the server executable and configuration in global folders
 ```
 sudo mv mediamtx /usr/local/bin/
@@ -301,6 +305,8 @@ address 192.168.10.1/24
 nano +2689 ~/.local/lib/python3.13/site-packages/dronekit/__init__.py
 change collections.MutableMapping on collections.abc.MuttableMapping
 ```
+<img width="673" height="205" alt="12d8f6e7-b302-4607-817f-719d94ed8989" src="https://github.com/user-attachments/assets/e67765cb-1f38-4dc1-ad12-153a02a43402" />
+
 16. Reboot OS
 ```
 sudo reboot
