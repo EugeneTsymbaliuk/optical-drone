@@ -57,10 +57,14 @@ address 192.168.10.2/24
 ```
 crontab -e
 ```
+<img width="660" height="208" alt="4" src="https://github.com/user-attachments/assets/e067e245-adc4-44bf-8623-d2339ef849f0" />
+
 and add next at the file end
 ```
 @reboot sleep 20; /usr/bin/python3 ~/optical-drone/main_gnd.py &
 ```
+<img width="760" height="583" alt="3" src="https://github.com/user-attachments/assets/4e9bb30d-c7be-4fea-9de6-7a2b10e0280b" />
+
 8. Reboot OS
 ```
 sudo reboot
