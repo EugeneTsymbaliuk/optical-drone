@@ -1,8 +1,10 @@
 
 # Installation on Ground Station
+![Uploading Screenshot 2025-11-17 115812.png…]()
 
 Ground Station as tested on RP3, p4 & RP5.
 Install latest OS on RPi.
+<img width="721" height="394" alt="6" src="https://github.com/user-attachments/assets/ae1c838f-f70b-4a69-903e-4e51564808c7" />
 
 Connect to Raspberry Pi, open Terminal and type all commands:
 
