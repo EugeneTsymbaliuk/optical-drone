@@ -74,6 +74,8 @@ sudo reboot
 ![406905698-782968ab-a32a-4c4f-a173-6059ffc1c72f](https://github.com/user-attachments/assets/9a05a59d-1232-4fbc-ad0a-aab2f2a22201)
 
 Install latest OS on RPi.
+<img width="721" height="394" alt="6 – копія" src="https://github.com/user-attachments/assets/9a29b8a2-f65a-46a1-a76a-74fcce9f113e" />
+
 
 Connect to Raspberry Pi, open Terminal and type all commands:
 
@@ -190,6 +192,8 @@ sudo reboot
 
 
 Install latest OS on RPi.
+<img width="721" height="394" alt="6 – копія" src="https://github.com/user-attachments/assets/30c0e077-8c4a-4cdc-bb6b-6454a9969292" />
+
 
 Connect to Raspberry Pi, open Terminal and type all commands:
 
