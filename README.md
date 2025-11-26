@@ -159,10 +159,14 @@ sudo raspi-config
 - Select option 1 - System Options
 - Select option S5 - Boot / Autologin
 - Select option B1 - Console
-12. Open crontab
+12. Open crontab and choose 1
+<img width="660" height="208" alt="4" src="https://github.com/user-attachments/assets/78e2b3b3-a39c-489e-ad92-3af2caa0625f" />
+
 ```
 @reboot sleep 20; /usr/bin/python3 ~/optical-drone/main_air.py &
 ```
+<img width="587" height="502" alt="Air_Crontab" src="https://github.com/user-attachments/assets/75f6c61e-ba44-4f0d-bcd2-10d4f69213c6" />
+
 13. Add static IP address
 ```
 sudo nmtui
@@ -280,7 +284,9 @@ sudo raspi-config
 - Select option 1 - System Options
 - Select option S5 - Boot / Autologin
 - Select option B1 - Console
-13. Open crontab
+13. Open crontab and choose 1
+<img width="660" height="208" alt="4" src="https://github.com/user-attachments/assets/92f1158f-c429-4902-a216-0a60983f7810" />
+
 ```
 crontab -e
 ```
@@ -288,6 +294,8 @@ and add next at the file end
 ```
 @reboot sleep 20; /usr/bin/python3 ~/optical-drone/main_gnd_drone.py &
 ```
+<img width="611" height="521" alt="Gnd_Drone_crontab" src="https://github.com/user-attachments/assets/41a9f187-23d7-4c39-8ed0-0eb03620ec90" />
+
 14. Add static IP address
 ```
 sudo nmtui
