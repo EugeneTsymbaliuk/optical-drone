@@ -50,7 +50,7 @@ sudo nmtui
 ```
 Choose eth0 and add 192.168.10.2/24
 
-7. Open crontab 
+7. Open crontab and choose 1
 ```
 crontab -e
 ```
