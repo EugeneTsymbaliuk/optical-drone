@@ -58,7 +58,7 @@ def openSerial():
                     sleep(0.01)
             except TimeoutError:
                 #print("STOP!")
-                rcOverrides(1500, 1500)
+                rcOverrides(1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500)
                 pass
     return bytes(chans)
 
