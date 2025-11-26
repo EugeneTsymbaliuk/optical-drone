@@ -46,13 +46,10 @@ Exit raspi-config and reboot the Raspberry Pi for changes to take effect
 
 6. Add static IP address
 ```
-sudo nano /etc/network/interfaces.d/eth0
+sudo nmtui
 ```
-```
-allow-hotplug eth0
-iface eth0 inet static
-address 192.168.10.2/24
-``` 
+Choose eth0 and add 192.168.10.2/24
+
 7. Open crontab 
 ```
 crontab -e
@@ -168,13 +165,9 @@ sudo raspi-config
 ```
 13. Add static IP address
 ```
-sudo nano /etc/network/interfaces.d/eth0
+sudo nmtui
 ```
-```
-allow-hotplug eth0
-iface eth0 inet static
-address 192.168.10.1/24
-``` 
+Choose eth0 and add 192.168.10.1/24
 14. Open crontab 
 ```
 crontab -e
@@ -297,13 +290,10 @@ and add next at the file end
 ```
 14. Add static IP address
 ```
-sudo nano /etc/network/interfaces.d/eth0
+sudo nmtui
 ```
-```
-allow-hotplug eth0
-iface eth0 inet static
-address 192.168.10.1/24
-``` 
+Choose eth0 and add 192.168.10.1/24
+
 15. To work dronekit in python from 3.13 you need to
 ```
 nano +2689 ~/.local/lib/python3.13/site-packages/dronekit/__init__.py
