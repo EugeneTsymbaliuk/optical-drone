@@ -172,15 +172,7 @@ sudo raspi-config
 sudo nmtui
 ```
 Choose eth0 and add 192.168.10.1/24
-14. Open crontab 
-```
-crontab -e
-```
-and add next at the file end
-```
-@reboot sleep 20; /usr/bin/python3 ~/optical-drone/main_air.py &
-```
-15. Reboot OS
+14. Reboot OS
 ```
 sudo reboot
 ```
