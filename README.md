@@ -309,6 +309,9 @@ sudo reboot
 
 <img width="581" height="549" alt="Capture" src="https://github.com/user-attachments/assets/b70c132b-7cc5-492d-812b-ec54bfdb6248" />
 
+18. Config channels 1&2(right stick of RC) to operate your RC car
+![5274098532891692447](https://github.com/user-attachments/assets/03c5baca-1bd8-4358-95c6-dae095e008f1)
+
 # General Info
 1. Check Cameras
 ```
