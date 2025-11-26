@@ -34,7 +34,7 @@ def sinfo():
 
 def pwmCalc(crsf_value):
 #    pwm = 1500 + (0.625 * (crsf_value - 992))
-    pwm = crsf_value * 0.61 + 894
+    pwm = crsf_value * 0.61 + 895
     return int(pwm)
 
 def rcOverrides(ch1, ch2, ch3, ch4, ch5, ch6, ch7, ch8, ch9, ch10):
