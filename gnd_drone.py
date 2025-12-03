@@ -53,7 +53,7 @@ def openSerial():
                 chans = pickle.loads(data)
                 if chans[0] > 1:
                     #print(chans[0], chans[1])
-                    #printpwmCalc(chans[0]), pwmCalc(chans[1]), pwmCalc(chans[2]), pwmCalc(chans[3]), pwmCalc(chans[4]), pwmCalc(chans[5]), pwmCalc(chans[6]), pwmCalc(chans[7]), pwmCalc(chans[8]), pwmCalc(chans[9])
+                    #print(pwmCalc(chans[0]), pwmCalc(chans[1]), pwmCalc(chans[2]), pwmCalc(chans[3]), pwmCalc(chans[4]), pwmCalc(chans[5]), pwmCalc(chans[6]), pwmCalc(chans[7]), pwmCalc(chans[8]), pwmCalc(chans[9]))
                     rcOverrides(pwmCalc(chans[0]), pwmCalc(chans[1]), pwmCalc(chans[2]), pwmCalc(chans[3]), pwmCalc(chans[4]), pwmCalc(chans[5]), pwmCalc(chans[6]), pwmCalc(chans[7]), pwmCalc(chans[8]), pwmCalc(chans[9]))
                     sleep(0.01)
             except TimeoutError:
