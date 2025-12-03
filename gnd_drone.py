@@ -8,7 +8,7 @@ cat /proc/cpuinfo
 import socket
 import pickle
 from time import time, sleep
-from threading import Thread
+#from threading import Thread
 from dronekit import connect, VehicleMode
 
 chans = []
@@ -19,11 +19,20 @@ UDP_PORT = 5005
 
 sskey = '00000000ca127702'
 
-# Create the connection to drone
-print('Connecting to FC')
-#vehicle = connect('tcp:192.168.1.145:5762', rate=40)
-vehicle = connect("/dev/ttyAMA0", baud=57600, wait_ready=True,  timeout=100, rate=40)
-print('Connected to FC')
+
+def mavlink_conn(retries=3, delay=5):
+    for i in range(retries):
+        try:
+            # Create the connection to drone
+            print('Connecting to FC')
+            #vehicle = connect('tcp:192.168.1.145:5762', rate=40)
+            vehicle = connect("/dev/ttyAMA0", baud=57600, wait_ready=True,  timeout=100, rate=40)
+        except dronekit.APIException:
+            print("Unable to connect to FC!")
+            pass
+            sleep(delay)
+
+    print('Connected to FC')
 
 def sinfo():
     global skey
@@ -42,7 +51,8 @@ def rcOverrides(ch1, ch2, ch3, ch4, ch5, ch6, ch7, ch8):
 
 def openSerial():
     global chans
-    sinfo()
+    mavlink_conn()
+    #sinfo()
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.bind((UDP_IP, UDP_PORT))
     sock.settimeout(3.0)
@@ -63,4 +73,4 @@ def openSerial():
     return bytes(chans)
 
 if __name__ == "__main__":
-    Thread(target=openSerial).start()
+    openSerial()
