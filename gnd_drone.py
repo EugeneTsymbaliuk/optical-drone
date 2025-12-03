@@ -52,7 +52,7 @@ def rcOverrides(ch1, ch2, ch3, ch4, ch5, ch6, ch7, ch8):
 def openSerial():
     global chans
     mavlink_conn()
-    #sinfo()
+    sinfo()
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.bind((UDP_IP, UDP_PORT))
     sock.settimeout(3.0)
