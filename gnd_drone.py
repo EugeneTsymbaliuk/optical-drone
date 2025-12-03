@@ -20,7 +20,7 @@ UDP_PORT = 5005
 sskey = '00000000ca127702'
 
 
-def mavlink_conn(retries=3, delay=5):
+def mavlink_conn(retries=3, delay=3):
     for i in range(retries):
         try:
             # Create the connection to drone
@@ -29,7 +29,7 @@ def mavlink_conn(retries=3, delay=5):
             vehicle = connect("/dev/ttyAMA0", baud=57600, wait_ready=True,  timeout=100, rate=40)
         except dronekit.APIException:
             print("Unable to connect to FC!")
-            pass
+            #pass
             sleep(delay)
 
     print('Connected to FC')
