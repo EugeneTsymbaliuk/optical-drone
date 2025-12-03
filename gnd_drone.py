@@ -8,7 +8,7 @@ cat /proc/cpuinfo
 import socket
 import pickle
 from time import time, sleep
-#from threading import Thread
+import dronekit
 from dronekit import connect, VehicleMode
 
 chans = []
