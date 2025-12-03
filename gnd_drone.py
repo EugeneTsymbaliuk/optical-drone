@@ -20,17 +20,17 @@ UDP_PORT = 5005
 sskey = '00000000ca127702'
 
 
-def mavlink_conn(retries=3, delay=3):
-    for i in range(retries):
-        try:
-            # Create the connection to drone
-            print('Connecting to FC')
-            vehicle = connect("/dev/ttyAMA0", baud=57600, wait_ready=True,  timeout=100, rate=40)
-        except dronekit.APIException:
-            print("Unable to connect to FC!")
-            sleep(delay)
+for i in range(3):
+    try:
+        # Create the connection to drone
+        print('Connecting to FC')
+        #vehicle = connect('tcp:192.168.1.145:5762', rate=40)
+        vehicle = connect("/dev/ttyAMA0", baud=57600, wait_ready=True,  timeout=100, rate=40)
+    except dronekit.APIException:
+        print("Unable to connect to FC!")
+        sleep(1)
 
-    print('Connected to FC')
+print('Connected to FC')
 
 def sinfo():
     global skey
@@ -49,7 +49,6 @@ def rcOverrides(ch1, ch2, ch3, ch4, ch5, ch6, ch7, ch8):
 
 def openSerial():
     global chans
-    mavlink_conn()
     sinfo()
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.bind((UDP_IP, UDP_PORT))
