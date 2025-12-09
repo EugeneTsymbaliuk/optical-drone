@@ -13,18 +13,38 @@ iframe {
   width: 80%;
   float: left; /* Float the iframe to the left */
   margin-right: 15px; /* Add some space between iframe and text */
-}
+  }
+
+.card {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 25px;
+  border: 1px solid #e9ecef;
+  transition: transform 0.3s, box-shadow 0.3s;
+  }
+
 </style>
 </head>
 <body>
 
 <div class="iframe-container">
   <iframe src="http://192.168.1.203:8889/cam" height="900" title="Example Website"></iframe>
-  <p> <h3>Кількість супутників:</h3> 0</p>
-  <p> <h3>Стан акумулятора:</h3> вольтаж: 0.009, струм: 17.21, рівень: 83</p>
-  <p> <h3>Напрямок:</h3> 0</p>
-</p>
-</div>
 
+            <div class="card">
+                <h2><i class="fas fa-bolt"></i> OSD</h2>
+                <div class="live-data">
+                    <div><strong>Поточний час:</strong> <span id="currentTime">00:00:00</span></div>
+                    <div><strong>Супутники:</strong> <span id="sats">0</span></div>
+                    <div><strong>Вольтаж:</strong> <span id="volts">V: 0, A: 0</span></div>
+                    <div><strong>Ампераж:</strong> <span id="amps">A: 0</span></div>
+                    <div><strong>Напрямок:</strong> <span id="head">0</span></div>
+                </div>
+                </div>
+            </div>
+
+<p id="myDynamicContent"></p>
+<div id="userInfo"></div>
+
+<script src="dynamic-updates.js"></script>
 </body>
 </html>
