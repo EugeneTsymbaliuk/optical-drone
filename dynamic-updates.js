@@ -1,8 +1,3 @@
-  GNU nano 5.4                                                                                     dynamic-updates.js
-let liveUpdatesActive = false;
-let lat = 30.00
-let lon = 50.00
-
 function updateLiveData() {
     // Current time
     const now = new Date();
