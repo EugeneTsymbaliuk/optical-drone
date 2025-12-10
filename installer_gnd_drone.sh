@@ -13,3 +13,6 @@ chmod +x mediamtx
 
 rm ~/optical-drone/*gnd.*
 rm ~/optical-drone/*air*
+
+mv ~/optical-drone/index.html
+mv ~/optical-drone/
