@@ -3,7 +3,7 @@
 <img width="786" height="571" alt="Screenshot 2025-11-17 115812" src="https://github.com/user-attachments/assets/726fd13e-9e3a-4c4a-b0fb-5a5be12e147a" />
 
 
-Ground Station was tested on RP3, p4 & RP5.
+Ground Station was tested on RP3, RP4 & RP5.
 Install latest OS on RPi.
 <img width="721" height="394" alt="6" src="https://github.com/user-attachments/assets/ae1c838f-f70b-4a69-903e-4e51564808c7" />
 
