@@ -289,7 +289,7 @@ crontab -e
 
 ```
 @reboot sleep 15; /usr/bin/python3 ~/optical-drone/httpserver.py &
-@reboot sleep 20; /usr/bin/python3 ~/optical-drone/main_air.py &
+@reboot sleep 20; /usr/bin/python3 ~/optical-drone/main_gnd_drone.py &
 ```
 <img width="611" height="521" alt="Gnd_Drone_crontab" src="https://github.com/user-attachments/assets/41a9f187-23d7-4c39-8ed0-0eb03620ec90" />
 
