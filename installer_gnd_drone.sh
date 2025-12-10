@@ -14,5 +14,5 @@ chmod +x mediamtx
 rm ~/optical-drone/*gnd.*
 rm ~/optical-drone/*air*
 
-mv ~/optical-drone/index.html
-mv ~/optical-drone/
+mv ~/optical-drone/index.html ~/index.html 
+mv ~/optical-drone/dynamic-updates.js ~/dynamic-updates.js
