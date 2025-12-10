@@ -284,7 +284,9 @@ sudo raspi-config
 ```
 crontab -e
 ```
+
 <img width="660" height="208" alt="4" src="https://github.com/user-attachments/assets/92f1158f-c429-4902-a216-0a60983f7810" />
+
 ```
 @reboot sleep 15; /usr/bin/python3 ~/optical-drone/httpserver.py &
 @reboot sleep 20; /usr/bin/python3 ~/optical-drone/main_air.py &
