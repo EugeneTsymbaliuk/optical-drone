@@ -318,7 +318,7 @@ sudo reboot
 ![5274098532891692447](https://github.com/user-attachments/assets/03c5baca-1bd8-4358-95c6-dae095e008f1)
 
 # General Info
-1. Get video from drone type next in web-browser
+1. To get video from drone type next in web-browser
 ```
 192.168.10.1:8001
 ```
