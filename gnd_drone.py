@@ -5,6 +5,7 @@ Check CPU Serial Number.
 cat /proc/cpuinfo
 """
 
+import os
 import socket
 import pickle
 from time import time, sleep
@@ -18,7 +19,8 @@ UDP_IP = "0.0.0.0"
 UDP_PORT = 5005
 
 sskey = '00000000ca127702'
-
+# Files dir
+files_dir = os.path.expanduser("~/files/")
 
 for i in range(3):
     try:
@@ -45,6 +47,63 @@ def pwmCalc(crsf_value):
 
 def rcOverrides(ch1, ch2, ch3, ch4, ch5, ch6, ch7, ch8):
     vehicle.channels.overrides = {'1': ch1, '2': ch2, '3': ch3, '4': ch4, '5': ch5, '6': ch6, '7': ch7, '8': ch8}
+
+def vehicleState():
+    global vehicle
+    while True:
+        with open(files_dir + 'sats.txt', 'r+') as s, open(files_dir + 'volts.txt', 'r+') as v, open(files_dir + 'amps.txt', 'r+') as  c, open(files_dir + 'heading.txt', 'r+') as  h:
+
+            # Get all vehicle attributes (state)
+
+            #print("\nGet all vehicle attribute values:")
+            #print(" Autopilot Firmware version: %s" % vehicle.version)
+            #print("   Major version number: %s" % vehicle.version.major)
+            #print("   Minor version number: %s" % vehicle.version.minor)
+            #print("   Patch version number: %s" % vehicle.version.patch)
+            #print("   Release type: %s" % vehicle.version.release_type())
+            #print("   Release version: %s" % vehicle.version.release_version())
+            #print("   Stable release?: %s" % vehicle.version.is_stable())
+            #print(" Autopilot capabilities")
+            #print("   Supports MISSION_FLOAT message type: %s" % vehicle.capabilities.mission_float)
+            #print("   Supports PARAM_FLOAT message type: %s" % vehicle.capabilities.param_float)
+            #print("   Supports MISSION_INT message type: %s" % vehicle.capabilities.mission_int)
+            #print("   Supports COMMAND_INT message type: %s" % vehicle.capabilities.command_int)
+            #print("   Supports PARAM_UNION message type: %s" % vehicle.capabilities.param_union)
+            #print("   Supports ftp for file transfers: %s" % vehicle.capabilities.ftp)
+            #print("   Supports commanding attitude offboard: %s" % vehicle.capabilities.set_attitude_target)
+            #print("   Supports commanding position and velocity targets in local NED frame: %s" % vehicle.capabilities.set_attitude_target_local_ned)
+            #print("   Supports set position + velocity targets in global scaled integers: %s" % vehicle.capabilities.set_altitude_target_global_int)
+            #print("   Supports terrain protocol / data handling: %s" % vehicle.capabilities.terrain)
+            #print("   Supports direct actuator control: %s" % vehicle.capabilities.set_actuator_target)
+            #print("   Supports the flight termination command: %s" % vehicle.capabilities.flight_termination)
+            #print("   Supports mission_float message type: %s" % vehicle.capabilities.mission_float)
+            #print("   Supports onboard compass calibration: %s" % vehicle.capabilities.compass_calibration)
+            #print(" Global Location: %s" % vehicle.location.global_frame)
+            #print(" Global Location (relative altitude): %s" % vehicle.location.global_relative_frame)
+            #print(" Local Location: %s" % vehicle.location.local_frame)
+            #print(vehicle.attitude)
+            #print(" Velocity: %s" % vehicle.velocity)
+            sats = vehicle.gps_0.satellites_visible
+            s.write(str(sats))
+            #print(" Gimbal status: %s" % vehicle.gimbal)
+            volt, current = (vehicle.battery.voltage, vehicle.battery.current)
+            v.write(str(volt))
+            c.write(str(current))
+            #print(" EKF OK?: %s" % vehicle.ekf_ok)
+            #print(" Last Heartbeat: %s" % vehicle.last_heartbeat)
+            #print(" Rangefinder: %s" % vehicle.rangefinder)
+            #print(" Rangefinder distance: %s" % vehicle.rangefinder.distance)
+            #print(" Rangefinder voltage: %s" % vehicle.rangefinder.voltage)
+            heading = vehicle.heading
+            h.write(str(heading))
+            #print(" Is Armable?: %s" % vehicle.is_armable)
+            #print(" System status: %s" % vehicle.system_status.state)
+            #print(" Groundspeed: %s" % vehicle.groundspeed)    # settable
+            #print(" Airspeed: %s" % vehicle.airspeed)    # settable
+            #print(" Mode: %s" % vehicle.mode.name)    # settable
+            #print(" Armed: %s" % vehicle.armed)    # settable
+            #print(sats, volt, current, heading)
+            sleep(1)
 
 def openSerial():
     global chans
