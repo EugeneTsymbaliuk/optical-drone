@@ -322,6 +322,9 @@ sudo reboot
 ```
 192.168.10.1:8001
 ```
+
+<img width="1813" height="970" alt="Screenshot 2025-12-10 150019" src="https://github.com/user-attachments/assets/c55df7de-bad4-4677-831d-99b1c0e2d025" />
+
 2. Check Cameras
 ```
 v4l2-ctl --list-devices
