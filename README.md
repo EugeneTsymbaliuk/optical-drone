@@ -281,11 +281,10 @@ sudo raspi-config
 - Select option S5 - Boot / Autologin
 - Select option B1 - Console
 13. Open crontab and choose 1
-<img width="660" height="208" alt="4" src="https://github.com/user-attachments/assets/92f1158f-c429-4902-a216-0a60983f7810" />
-
 ```
 crontab -e
 ```
+<img width="660" height="208" alt="4" src="https://github.com/user-attachments/assets/92f1158f-c429-4902-a216-0a60983f7810" />
 and add next at the file end
 ```
 @reboot sleep 15; /usr/bin/python3 ~/optical-drone/httpserver.py &
