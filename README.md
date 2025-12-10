@@ -316,9 +316,9 @@ sudo reboot
 
 # General Info
 1. Get video from drone type next in web-browser
-'''
-192.168.10.1:8000
-'''
+```
+192.168.10.1:8001
+```
 2. Check Cameras
 ```
 v4l2-ctl --list-devices
