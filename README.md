@@ -160,6 +160,9 @@ sudo raspi-config
 - Select option S5 - Boot / Autologin
 - Select option B1 - Console
 12. Open crontab and choose 1
+```
+crontab -e
+```
 <img width="660" height="208" alt="4" src="https://github.com/user-attachments/assets/78e2b3b3-a39c-489e-ad92-3af2caa0625f" />
 
 ```
