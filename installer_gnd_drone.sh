@@ -8,7 +8,7 @@ pip3 install dronekit
 
 mv ~/optical-drone/index.html ~/index.html 
 mv ~/optical-drone/dynamic-updates.js ~/dynamic-updates.js
-mkdir files/
+mkdir ~/files/
 mv ~/optical-drone/files/* ~/files/
 mv ~/optical-drone/files/* ~/files/
 
