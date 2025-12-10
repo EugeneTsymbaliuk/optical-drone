@@ -3,6 +3,6 @@
 import gnd_drone
 from threading import Thread
 
-Thread(gnd_drone.vehicleState).start()
+Thread(target=gnd_drone.vehicleState).start()
 gnd_drone.openSerial()
 
