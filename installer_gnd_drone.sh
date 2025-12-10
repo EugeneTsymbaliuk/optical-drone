@@ -1,8 +1,5 @@
 #!/bin/bash
 
-sudo apt update
-sudo apt -y upgrade
-
 pip3 install future
 pip3 install dronekit
 
