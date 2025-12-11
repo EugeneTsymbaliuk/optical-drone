@@ -1,48 +1,119 @@
 <!DOCTYPE html>
 <html>
- <meta charset="utf-8">
 <head>
+<meta charset="utf-8">
 <style>
-.iframe-container {
-  overflow: auto; /* Clears the float */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 1280px; /* Adjust based on your video size */
+  margin: 0 auto;
 }
 
 iframe {
-  width: 80%;
-  float: left; /* Float the iframe to the left */
-  margin-right: 15px; /* Add some space between iframe and text */
-  }
+  width: 100%;
+  height: 700px;
+  display: block;
+}
 
-.card {
-  background: #f8f9fa;
-  border-radius: 15px;
-  padding: 25px;
-  border: 1px solid #e9ecef;
-  transition: transform 0.3s, box-shadow 0.3s;
-  }
+.osd-overlay {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 14px;
+  z-index: 10;
+  min-width: 300px;
+}
+
+.osd-data {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.osd-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 3px 0;
+}
+
+.osd-value {
+  color: #00ff00; /* Green color for values (common in OSD) */
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.osd-title {
+  font-weight: normal;
+}
+
+/* Optional: Add a header for the OSD */
+.osd-header {
+  text-align: center;
+  color: #00ffff;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #00ffff;
+  padding-bottom: 5px;
+}
 
 </style>
 </head>
 <body>
 
-<div class="iframe-container">
-  <iframe src="http://192.168.10.1:8889/cam" height="900" title="Example Website"></iframe>
-
-            <div class="card">
-                <h2><i class="fas fa-bolt"></i>OSD</h2>
-                <div class="live-data">
-                    <div><strong>Поточний час:</strong> <span id="currentTime">00:00:00</span></div>
-                    <div><strong>Запуск двигунів:</strong> <span id="arm">0</span></div>
-                    <div><strong>Швидкість:</strong> <span id="gspeed">0</span></div>
-                    <div><strong>Напруга:</strong> <span id="volts">0</span></div>
-                    <div><strong>Струм:</strong> <span id="amps">0</span></div>
-                    <div><strong>Супутники:</strong> <span id="sats">0</span></div>
-                    <div><strong>Широта:</strong> <span id="lat">0</span></div>
-                    <div><strong>Довгота:</strong> <span id="lon">0</span></div>
-                    <div><strong>Напрямок:</strong> <span id="head">0</span></div>
-                </div>
-                </div>
-            </div>
+<div class="video-container">
+  <!-- OSD Overlay -->
+  <div class="osd-overlay">
+    <div class="osd-header">OSD DATA</div>
+    <div class="osd-data">
+      <div class="osd-item">
+        <span class="osd-title">TIME:</span>
+        <span class="osd-value" id="currentTime">00:00:00</span>
+      </div>
+      <div class="osd-item">
+        <span class="osd-title">ARMED:</span>
+        <span class="osd-value" id="arm">0</span>
+      </div>
+      <div class="osd-item">
+        <span class="osd-title">SPEED:</span>
+        <span class="osd-value" id="gspeed">0</span>
+      </div>
+      <div class="osd-item">
+        <span class="osd-title">VOLTS:</span>
+        <span class="osd-value" id="volts">0</span>
+      </div>
+      <div class="osd-item">
+        <span class="osd-title">AMPS:</span>
+        <span class="osd-value" id="amps">0</span>
+      </div>
+      <div class="osd-item">
+        <span class="osd-title">SATS:</span>
+        <span class="osd-value" id="sats">0</span>
+      </div>
+      <div class="osd-item">
+        <span class="osd-title">LAT:</span>
+        <span class="osd-value" id="lat">0</span>
+      </div>
+      <div class="osd-item">
+        <span class="osd-title">LON:</span>
+        <span class="osd-value" id="lon">0</span>
+      </div>
+      <div class="osd-item">
+        <span class="osd-title">HEAD:</span>
+        <span class="osd-value" id="head">0</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Video -->
+  <iframe src="http://192.168.1.203:8889/cam" title="Video Stream"></iframe>
+</div>
 
 <p id="myDynamicContent"></p>
 <div id="userInfo"></div>
