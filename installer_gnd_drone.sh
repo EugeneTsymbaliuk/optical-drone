@@ -16,3 +16,5 @@ chmod +x mediamtx
 
 rm ~/optical-drone/*gnd.*
 rm ~/optical-drone/*air*
+rm ~/optical-drone/README*
+rm ~/optical-drone/installer*
