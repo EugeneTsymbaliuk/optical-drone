@@ -26,7 +26,7 @@ for i in range(3):
     try:
         # Create the connection to drone
         print('Connecting to FC')
-        vehicle = connect("/dev/ttyAMA0", baud=57600, wait_ready=True,  timeout=100, rate=40)
+        vehicle = connect("/dev/ttyAMA0", baud=115200, wait_ready=True,  timeout=100, rate=40)
     except dronekit.APIException:
         print("Unable to connect to FC!")
         sleep(1)
@@ -51,7 +51,7 @@ def rcOverrides(ch1, ch2, ch3, ch4, ch5, ch6, ch7, ch8):
 def vehicleState():
     global vehicle
     while True:
-        with open(files_dir + 'sats.txt', 'r+') as s, open(files_dir + 'volts.txt', 'r+') as v, open(files_dir + 'amps.txt', 'r+') as  c, open(files_dir + 'heading.txt', 'r+') as  h:
+        with open(files_dir + 'sats.txt', 'r+') as s, open(files_dir + 'volts.txt', 'r+') as v, open(files_dir + 'amps.txt', 'r+') as c, open(files_dir + 'heading.txt', 'r+') as h, open(files_dir + 'gspeed.txt', 'r+') as gs, open(files_dir + 'arm.txt', 'r+') as  arm, open(files_dir + 'lat.txt', 'r+') as lat, open(files_dir + 'lon.txt', 'r+') as lon:
 
             # Get all vehicle attributes (state)
 
@@ -83,25 +83,28 @@ def vehicleState():
             #print(" Local Location: %s" % vehicle.location.local_frame)
             #print(vehicle.attitude)
             #print(" Velocity: %s" % vehicle.velocity)
-            sats = vehicle.gps_0.satellites_visible
-            s.write(str(sats))
+            #sats = vehicle.gps_0.satellites_visible
+            s.write(str(vehicle.gps_0.satellites_visible))
             #print(" Gimbal status: %s" % vehicle.gimbal)
-            volt, current = (vehicle.battery.voltage, vehicle.battery.current)
-            v.write(str(volt))
-            c.write(str(current))
+            #volt, current = (vehicle.battery.voltage, vehicle.battery.current)
+            v.write(str(vehicle.battery.voltage))
+            c.write(str(vehicle.battery.current))
             #print(" EKF OK?: %s" % vehicle.ekf_ok)
             #print(" Last Heartbeat: %s" % vehicle.last_heartbeat)
             #print(" Rangefinder: %s" % vehicle.rangefinder)
             #print(" Rangefinder distance: %s" % vehicle.rangefinder.distance)
             #print(" Rangefinder voltage: %s" % vehicle.rangefinder.voltage)
-            heading = vehicle.heading
-            h.write(str(heading))
+            #heading = vehicle.heading
+            h.write(str(vehicle.heading))
             #print(" Is Armable?: %s" % vehicle.is_armable)
             #print(" System status: %s" % vehicle.system_status.state)
-            #print(" Groundspeed: %s" % vehicle.groundspeed)    # settable
+            gs.write(str(vehicle.groundspeed))
             #print(" Airspeed: %s" % vehicle.airspeed)    # settable
             #print(" Mode: %s" % vehicle.mode.name)    # settable
-            #print(" Armed: %s" % vehicle.armed)    # settable
+            arm.write(str(vehicle.armed))    # settable
+            lat.write(str(vehicle.location.global_frame.lat))
+            lon.write(str(vehicle.location.global_frame.lon))
+            #print(vehicle.location.global_frame.lat, vehicle.location.global_frame.lon)
             #print(sats, volt, current, heading)
             sleep(1)
 
@@ -128,4 +131,5 @@ def openSerial():
     return bytes(chans)
 
 if __name__ == "__main__":
-    openSerial()
+    vehicleState()
+    #openSerial()
