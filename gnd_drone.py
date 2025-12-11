@@ -26,7 +26,7 @@ for i in range(3):
     try:
         # Create the connection to drone
         print('Connecting to FC')
-        vehicle = connect("/dev/ttyAMA0", baud=57600, wait_ready=True,  timeout=100, rate=40)
+        vehicle = connect("/dev/ttyAMA0", baud=115200, wait_ready=True,  timeout=100, rate=40)
     except dronekit.APIException:
         print("Unable to connect to FC!")
         sleep(1)
@@ -98,12 +98,13 @@ def vehicleState():
             h.write(str(vehicle.heading))
             #print(" Is Armable?: %s" % vehicle.is_armable)
             #print(" System status: %s" % vehicle.system_status.state)
-            gs.write(str(vehicle.groundspeed))
+            #gspeed = "{:.2f}".format(vehicle.groundspeed)
+            gs.write(str("{:.4f}".format(vehicle.groundspeed)))
             #print(" Airspeed: %s" % vehicle.airspeed)    # settable
             #print(" Mode: %s" % vehicle.mode.name)    # settable
             arm.write(str(vehicle.armed))    # settable
-            lat.write(str(vehicle.location.global_frame.lat))
-            lon.write(str(vehicle.location.global_frame.lon))
+            lat.write(str("{:.4f}".format(vehicle.location.global_frame.lat)))
+            lon.write(str("{:.4f}".format(vehicle.location.global_frame.lon)))
             #print(vehicle.location.global_frame.lat, vehicle.location.global_frame.lon)
             #print(sats, volt, current, heading)
             sleep(1)
