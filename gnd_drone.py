@@ -26,7 +26,7 @@ for i in range(3):
     try:
         # Create the connection to drone
         print('Connecting to FC')
-        vehicle = connect("/dev/ttyAMA0", baud=115200, wait_ready=True,  timeout=100, rate=40)
+        vehicle = connect("/dev/ttyAMA0", baud=57600, wait_ready=True,  timeout=100, rate=40)
     except dronekit.APIException:
         print("Unable to connect to FC!")
         sleep(1)
