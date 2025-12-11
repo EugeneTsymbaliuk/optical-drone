@@ -12,3 +12,5 @@ tar -xvzf mediamtx_v1.11.1_linux_armv6.tar.gz
 chmod +x mediamtx
 
 rm ~/optical-drone/*gnd*
+rm ~/optical-drone/README*
+rm ~/optical-drone/installer*
