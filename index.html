@@ -27,7 +27,7 @@ iframe {
   font-family: monospace;
   font-size: 14px;
   z-index: 10;
-  min-width: 300px;
+  min-width: 100px;
 }
 
 .osd-data {
@@ -71,7 +71,6 @@ iframe {
   <!-- OSD Overlay -->
   <div class="osd-overlay">
     <div class="osd-header">OSD DATA</div>
-    <div class="osd-data">
       <div class="osd-item">
         <span class="osd-title">TIME:</span>
         <span class="osd-value" id="currentTime">00:00:00</span>
@@ -112,7 +111,7 @@ iframe {
   </div>
   
   <!-- Video -->
-  <iframe src="http://192.168.10.1:8889/cam" title="Video Stream"></iframe>
+  <iframe src="http://192.168.1.203:8889/cam" title="Video Stream"></iframe>
 </div>
 
 <p id="myDynamicContent"></p>
