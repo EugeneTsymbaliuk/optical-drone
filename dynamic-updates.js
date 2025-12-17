@@ -6,6 +6,8 @@ let file_arm = 'files/arm.txt';
 let file_gspeed = 'files/gspeed.txt';
 let file_lat = 'files/lat.txt';
 let file_lon = 'files/lon.txt';
+let file_alt = 'files/alt.txt';
+let file_mode = 'files/mode.txt';
 
 function fetchDada(file, item) {
     fetch(file)
@@ -42,7 +44,13 @@ function updateLiveData() {
 
     // Heading
     fetchDada(file_lon, 'lon')
- 
+
+    // Alt
+    fetchDada(file_alt, 'alt')
+
+    // Mode
+    fetchDada(file_mode, 'mode')
+    
     // Update timestamp
     updateTimestamp();
 }
