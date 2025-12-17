@@ -55,5 +55,5 @@ function updateLiveData() {
     updateTimestamp();
 }
 
-const timer = setInterval(updateLiveData, 1000);
+const timer = setInterval(updateLiveData, 200);
 updateLiveData();
