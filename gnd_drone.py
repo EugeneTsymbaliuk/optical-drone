@@ -51,7 +51,7 @@ def rcOverrides(ch1, ch2, ch3, ch4, ch5, ch6, ch7, ch8):
 def vehicleState():
     global vehicle
     while True:
-        with open(files_dir + 'sats.txt', 'r+') as s, open(files_dir + 'volts.txt', 'r+') as v, open(files_dir + 'amps.txt', 'r+') as c, open(files_dir + 'heading.txt', 'r+') as h, open(files_dir + 'gspeed.txt', 'r+') as gs, open(files_dir + 'arm.txt', 'r+') as  arm, open(files_dir + 'lat.txt', 'r+') as lat, open(files_dir + 'lon.txt', 'r+') as lon:
+        with open(files_dir + 'sats.txt', 'r+') as s, open(files_dir + 'volts.txt', 'r+') as v, open(files_dir + 'amps.txt', 'r+') as c, open(files_dir + 'heading.txt', 'r+') as h, open(files_dir + 'gspeed.txt', 'r+') as gs, open(files_dir + 'arm.txt', 'r+') as  arm, open(files_dir + 'lat.txt', 'r+') as lat, open(files_dir + 'lon.txt', 'r+') as lon, open(files_dir + 'alt.txt', 'r+') as alt, open(files_dir + 'mode.txt', 'r+') as mode:
 
             # Get all vehicle attributes (state)
 
@@ -80,6 +80,7 @@ def vehicleState():
             #print("   Supports onboard compass calibration: %s" % vehicle.capabilities.compass_calibration)
             #print(" Global Location: %s" % vehicle.location.global_frame)
             #print(" Global Location (relative altitude): %s" % vehicle.location.global_relative_frame)
+            alt.write(str(vehicle.location.global_relative_frame.alt))
             #print(" Local Location: %s" % vehicle.location.local_frame)
             #print(vehicle.attitude)
             #print(" Velocity: %s" % vehicle.velocity)
@@ -102,6 +103,7 @@ def vehicleState():
             gs.write(str("{:.4f}".format(vehicle.groundspeed)))
             #print(" Airspeed: %s" % vehicle.airspeed)    # settable
             #print(" Mode: %s" % vehicle.mode.name)    # settable
+            mode.write(str(vehicle.mode.name))
             arm.write(str(vehicle.armed))    # settable
             lat.write(str("{:.4f}".format(vehicle.location.global_frame.lat)))
             lon.write(str("{:.4f}".format(vehicle.location.global_frame.lon)))
