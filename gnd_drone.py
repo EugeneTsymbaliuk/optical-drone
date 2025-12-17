@@ -104,7 +104,11 @@ def vehicleState():
             #print(" Airspeed: %s" % vehicle.airspeed)    # settable
             #print(" Mode: %s" % vehicle.mode.name)    # settable
             mode.write(str(vehicle.mode.name))
-            arm.write(str(vehicle.armed))    # settable
+            if vehicle.armed == 0:
+                arming = "Disarm"
+            if vehicle.armed == 1:
+                arming = "Armed!"
+            arm.write(arming)
             lat.write(str("{:.4f}".format(vehicle.location.global_frame.lat)))
             lon.write(str("{:.4f}".format(vehicle.location.global_frame.lon)))
             #print(vehicle.location.global_frame.lat, vehicle.location.global_frame.lon)
