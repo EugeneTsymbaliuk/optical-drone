@@ -113,7 +113,7 @@ def vehicleState():
             lon.write(str("{:.4f}".format(vehicle.location.global_frame.lon)))
             #print(vehicle.location.global_frame.lat, vehicle.location.global_frame.lon)
             #print(sats, volt, current, heading)
-            sleep(1)
+            sleep(0.2)
 
 def openSerial():
     global chans
