@@ -103,7 +103,7 @@ def vehicleState():
             gs.write(str("{:.4f}".format(vehicle.groundspeed)))
             #print(" Airspeed: %s" % vehicle.airspeed)    # settable
             #print(" Mode: %s" % vehicle.mode.name)    # settable
-            mode.write(str(vehicle.mode.name))
+            mode.write(str(vehicle.mode.name)[:4])
             if vehicle.armed == 0:
                 arming = "Disarm"
             if vehicle.armed == 1:
